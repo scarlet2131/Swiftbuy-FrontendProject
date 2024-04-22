@@ -1,0 +1,117 @@
+:root {
+  /** 
+   * typography
+   */
+
+  --ff-urbanist: "Urbanist", sans-serif;
+}
+
+body {
+  font-family: var(--ff-urbanist);
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.next-button > .next-btn {
+  float: right;
+  margin-top: 2em;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.gender-wrapper {
+  display: flex;
+  width: 14.5em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button:hover {
+  color: rgb(26, 206, 41);
+}
+
+input,
+#email,
+#birth-date,
+#first-name,
+#last-name,
+#password,
+#confirm-password,
+#male,
+#female {
+  padding: 0.9em;
+  width: 100%;
+  color: wheat;
+  margin: 1em auto;
+  text-decoration: none;
+  background: none;
+  outline-style: none;
+  border: 1px solid rgb(26, 206, 41);
+  border-radius: 0.5em;
+}
+
+input[type="date"]:not(.has-value):before {
+  color: rgb(173, 173, 173);
+  content: attr(placeholder);
+}
+
+.gender-wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.multistep-form {
+  margin: 0 auto;
+  height: 50vh;
+  border-radius: 0.5em;
+}
+
+#step-form {
+  max-width: 90%;
+  margin: 2em auto;
+  color: white;
+}
+
+.step {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.progress-bar {
+  margin-top: 1.5em;
+  height: 5px;
+  background-color: greenyellow;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.progress-bar-filled {
+  height: 100%;
+  background-color: #4caf50;
+}
+
+@keyframes fillProgress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .step {
+    margin: 0 auto;
+    width: 90%;
+  }
+}

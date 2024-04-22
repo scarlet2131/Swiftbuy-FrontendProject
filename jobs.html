@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>SwiftBuy - Careers</title>
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./assets/images/favlogo.png" />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body id="top">
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <a href="./index.html">
+          <img
+            src="./assets/images/Light-Logo.png"
+            width="130"
+            height="40"
+            alt="SwiftBuy home"
+            class="logo-small"
+          />
+          <img
+            src="./assets/images/Light-Logo.png"
+            width="150"
+            height="28"
+            alt="SwiftBuy home"
+            class="logo"
+          />
+        </a>
+
+        <!-- NAVBAR  -->
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="index.html" class="navbar-link label-lg link:hover"
+                >Home</a
+              >
+            </li>
+
+            <li>
+              <a href="./stats.html" class="navbar-link label-lg link:hover"
+                >Stats</a
+              >
+            </li>
+
+            <li>
+              <a href="./about.html" class="navbar-link label-lg link:hover"
+                >About Us</a
+              >
+            </li>
+
+            <li>
+              <a href="./careers.html" class="navbar-link label-lg link:hover"
+                >Careers</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="./login.html"
+                class="navbar-link label-lg link:hover text-green-500"
+                id="navbar-login-logout"
+              ></a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-action space-x-4">
+          <button class="btn-icon primary" aria-label="wallet">
+            <a href="./cart.html"
+              ><ion-icon
+                class="w-8 h-8 text-white"
+                name="cart-outline"
+              ></ion-icon
+            ></a>
+          </button>
+
+          <button
+            class="btn-icon profil-btn"
+            aria-label="Swiftbuy account: John Wick"
+          >
+            <a href="./profile.html">
+              <img
+                src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Z3bmxoc2RieG1hNXlvNXF1azkxOHVlbjliaTM4OWFhd2x6MW1wbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GLF8IKQ1Fvws3BzQ9v/giphy.gif"
+                width="50"
+                height="50"
+                alt="John Wick"
+                class="img-cover"
+            /></a>
+          </button>
+
+          <button
+            class="nav-toggle-btn"
+            aria-label="menu toggle"
+            data-nav-toggler
+          >
+            <ion-icon
+              name="menu-outline"
+              aria-hidden="true"
+              class="default-icon w-14 h-14 text-white"
+            ></ion-icon>
+
+            <ion-icon
+              name="close-outline"
+              aria-hidden="true"
+              class="active-icon w-14 h-14 text-white"
+            ></ion-icon>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="w-[50%] mx-auto">
+      <article>
+        <!-- 
+        - #List of job positions in jobs page
+      -->
+
+        <section class="section hero" aria-label="home">
+          <div class="w-[90%] mx-auto mb-[15em]" id="search-box">
+            <input
+              class="mx-auto border-none text-white outline-none bg-gray-100 bg-opacity-10"
+              type="text"
+              id="search-input"
+              placeholder="Search job..."
+            />
+          </div>
+          <div id="job-list">
+            <ul id="job-list-items">
+              <li>
+                <div class="job">
+                  <div class="job-header hover:text-green-500 text-[1.5em]">
+                    Software Engineer
+                  </div>
+                  <div class="job-details my-[2em]">
+                    <p>Location: Toronto</p>
+                    <p>Job Type: Full-Time</p>
+                    <p id="jobdesc">Responsibilities:</p>
+                    <ol>
+                      <li>
+                        Collaborate with product managers, designers, and other
+                        stakeholders to understand requirements and translate
+                        them into technical specifications.
+                      </li>
+                      <li>
+                        Design and develop high-quality software solutions that
+                        meet technical and business requirements.
+                      </li>
+                      <li>
+                        Write clean, maintainable, and efficient code following
+                        best practices and coding standards.
+                      </li>
+                    </ol>
+                    <p id="jobdesc">Qualifications:</p>
+                    <ol>
+                      <li>
+                        Bachelor's degree in Computer Science, Engineering, or
+                        related field.
+                      </li>
+                      <li>3 years of experience in software development.</li>
+                      <li>
+                        Proficiency in programming languages such as Java,
+                        Python, or C++.
+                      </li>
+                    </ol>
+                    <a href="./jobapply.html" class="apply-button"
+                      >Apply for this job</a
+                    >
+                    <!-- <button class="apply-button">Apply for this job</button> -->
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="job">
+                  <div class="job-header hover:text-green-500 text-[1.5em]">
+                    Data Analyst
+                  </div>
+                  <div class="job-details my-[2em]">
+                    <p>Location: Toronto</p>
+                    <p>Job Type: Full-Time</p>
+                    <p id="jobdesc">Responsibilities:</p>
+                    <ol>
+                      <li>
+                        Collect, clean, and preprocess data from various sources
+                        to ensure accuracy and reliability.
+                      </li>
+                      <li>
+                        Analyze large datasets using statistical techniques and
+                        data visualization tools to identify trends and
+                        patterns.
+                      </li>
+                      <li>
+                        Develop and maintain data models, algorithms, and
+                        dashboards to support business objectives.
+                      </li>
+                    </ol>
+                    <p id="jobdesc">Qualifications:</p>
+                    <ol>
+                      <li>
+                        Bachelor's degree in Computer Science, Statistics,
+                        Mathematics, or a related field. Master's degree
+                        preferred.
+                      </li>
+                      <li>
+                        Proven experience as a Data Analyst or similar role,
+                        with a strong track record of analyzing complex
+                        datasets.
+                      </li>
+                      <li>
+                        Proficiency in SQL, Python, R, or other programming
+                        languages for data manipulation and analysis.
+                      </li>
+                    </ol>
+                    <a href="./jobapply.html" class="apply-button"
+                      >Apply for this job</a
+                    >
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="job">
+                  <div class="job-header hover:text-green-500 text-[1.5em]">
+                    Product Manager
+                  </div>
+                  <div class="job-details my-[2em]">
+                    <p>Location: Toronto</p>
+                    <p>Job Type: Full-Time</p>
+                    <p id="jobdesc">Responsibilities:</p>
+                    <ol>
+                      <li>
+                        Define and articulate the product vision, strategy, and
+                        roadmap based on market analysis, customer feedback, and
+                        business goals.
+                      </li>
+                      <li>
+                        Collaborate with stakeholders, including engineering,
+                        design, marketing, and sales teams, to gather
+                        requirements, prioritize features, and drive product
+                        development efforts.
+                      </li>
+                      <li>
+                        Lead the product development process, including concept
+                        ideation, requirement gathering, user story definition,
+                        and sprint planning.
+                      </li>
+                    </ol>
+                    <p id="jobdesc">Qualifications:</p>
+                    <ol>
+                      <li>
+                        Bachelor's degree in Computer Science, Engineering,
+                        Business, or a related field. MBA preferred.
+                      </li>
+                      <li>
+                        Proven experience as a Product Manager or similar role,
+                        with a track record of successfully launching and
+                        managing products from conception to launch.
+                      </li>
+                      <li>
+                        Strong analytical and problem-solving skills, with the
+                        ability to translate business requirements into
+                        actionable product features and specifications.
+                      </li>
+                    </ol>
+                    <a href="./jobapply.html" class="apply-button"
+                      >Apply for this job</a
+                    >
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="job">
+                  <div class="job-header hover:text-green-500 text-[1.5em]">
+                    Marketing Manager
+                  </div>
+                  <div class="job-details my-[2em]">
+                    <p>Location: Toronto</p>
+                    <p>Job Type: Full-Time</p>
+                    <p id="jobdesc">Responsibilities:</p>
+                    <ol>
+                      <li>
+                        Develop and implement strategic marketing plans and
+                        campaigns to achieve business objectives, including
+                        brand awareness, lead generation, and customer
+                        acquisition.
+                      </li>
+                      <li>
+                        Lead and manage a team of marketers, including digital
+                        marketers, content creators, and graphic designers, to
+                        execute marketing initiatives effectively and
+                        efficiently.
+                      </li>
+                      <li>
+                        Conduct market research and competitive analysis to
+                        identify market trends, customer needs, and growth
+                        opportunities
+                      </li>
+                    </ol>
+                    <p id="jobdesc">Qualifications:</p>
+                    <ol>
+                      <li>
+                        Bachelor's degree in Marketing, Business Administration,
+                        or a related field. MBA preferred.
+                      </li>
+                      <li>
+                        Proven experience as a Marketing Manager or similar
+                        role, with a track record of developing and executing
+                        successful marketing strategies and campaigns.
+                      </li>
+                      <li>
+                        Strong leadership and management skills, with the
+                        ability to motivate and inspire team members to achieve
+                        goals and deliver results.
+                      </li>
+                    </ol>
+                    <a href="./jobapply.html" class="apply-button"
+                      >Apply for this job</a
+                    >
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="job">
+                  <div class="job-header hover:text-green-500 text-[1.5em]">
+                    Graphic Designer
+                  </div>
+                  <div class="job-details my-[2em]">
+                    <p>Location: Toronto</p>
+                    <p>Job Type: Full-Time</p>
+                    <p id="jobdesc">Responsibilities:</p>
+                    <ol>
+                      <li>
+                        Conceptualize and design visual assets, including
+                        digital and print materials, such as social media
+                        graphics, website banners, email newsletters,
+                        advertisements, brochures, and product packaging.
+                      </li>
+                      <li>
+                        Collaborate with the marketing team to develop creative
+                        concepts and design solutions that align with brand
+                        guidelines and project objectives.
+                      </li>
+                      <li>
+                        Produce high-quality, pixel-perfect designs that
+                        effectively communicate key messages and resonate with
+                        target audiences
+                      </li>
+                    </ol>
+                    <p id="jobdesc">Qualifications:</p>
+                    <ol>
+                      <li>
+                        Bachelor's degree in Graphic Design, Visual
+                        Communication, or a related field.
+                      </li>
+                      <li>
+                        Proven experience as a Graphic Designer or similar role,
+                        with a strong portfolio showcasing a range of design
+                        projects and styles.
+                      </li>
+                      <li>
+                        Proficiency in graphic design software such as Adobe
+                        Creative Suite (Photoshop, Illustrator, InDesign).
+                      </li>
+                    </ol>
+                    <a href="./jobapply.html" class="apply-button"
+                      >Apply for this job</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <!-- Add more job listings as needed -->
+            </ul>
+          </div>
+          <div
+            class="bg-gray-100 bg-opacity-10"
+            id="apply-form"
+            style="display: none"
+          >
+            <h2>Job Application Form</h2>
+            <form id="job-application-form">
+              <label for="name">Name:</label><br />
+              <input type="text" id="name" name="name" /><br />
+              <label for="email">Email:</label><br />
+              <input type="email" id="email" name="email" /><br />
+              <input type="submit" value="Apply" />
+            </form>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer text-[1.5em]">
+      <div class="section footer-top">
+        <div class="container">
+          <div class="footer-brand">
+            <a href="#">
+              <img
+                src="./assets/images/Light-Logo.png"
+                width="130"
+                height="28"
+                loading="lazy"
+                alt="Swiftbuy home"
+              />
+            </a>
+
+            <p class="body-md footer-text">
+              Buy, sell and discover exclusive digital assets by the top artists
+              of NFTs world.
+            </p>
+          </div>
+
+          <ul class="footer-list">
+            <li>
+              <p class="title-lg footer-list-title">Swiftbuy</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Explore Item</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Live Auction</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Activities</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Wallets</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Creators</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <p class="title-lg footer-list-title">Useful Links</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">About Us</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Blog & News</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Terms & Condition</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Privacy policy</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="./login.html" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span id="footer-login" class="span">Login</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Contact Us</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="footer-list">
+            <ul>
+              <li>
+                <p class="title-lg footer-list-title">
+                  Download the Swiftbuy app
+                </p>
+              </li>
+
+              <li class="footer-list-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/appstore.png"
+                    width="134"
+                    height="40"
+                    loading="lazy"
+                    alt="Download Swiftbuy app from AppStore"
+                  />
+                </a>
+
+                <a href="#">
+                  <img
+                    src="./assets/images/playstore.png"
+                    width="134"
+                    height="40"
+                    loading="lazy"
+                    alt="Download Swiftbuy app from PlayStore"
+                  />
+                </a>
+              </li>
+            </ul>
+
+            <ul>
+              <li>
+                <p class="title-lg footer-list-title">Contact Details</p>
+              </li>
+
+              <li class="footer-list-item">
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+                <a href="mailto:swiftbuy@nft.com" class="footer-link"
+                  >swiftbuy@nft.com</a
+                >
+              </li>
+
+              <li class="footer-list-item">
+                <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+
+                <a href="tel:+1 111-222-3333" class="footer-link"
+                  >+1 111-222-3333</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="body-md text-center copyright">
+            &copy; 2024 SwiftBuy, Made with 💚 by Canvas Alchemists.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    - #BACK TO TOP
+  -->
+
+    <a
+      href="#top"
+      class="back-to-top btn-icon"
+      aria-label="back to top"
+      data-back-top-btn
+    >
+      <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+    </a>
+
+    <!-- Background Gradient  -->
+    <div class="body-bg-shape"></div>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

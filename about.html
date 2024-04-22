@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - SwiftBuy</title>
+    <link rel="shortcut icon" href="./assets/images/favlogo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/aboutUs.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body id="top">
+    <!-- Header -->
+    <header class="header" data-header>
+      <div class="container">
+        <a href="index.html">
+          <img
+            src="./assets/images/Light-Logo.png"
+            width="130"
+            height="40"
+            alt="SwiftBuy home"
+            class="logo-small"
+          />
+          <img
+            src="./assets/images/Light-Logo.png"
+            width="150"
+            height="28"
+            alt="SwiftBuy home"
+            class="logo"
+          />
+        </a>
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="index.html" class="navbar-link label-lg link:hover"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="./stats.html" class="navbar-link label-lg link:hover"
+                >Stats</a
+              >
+            </li>
+            <li>
+              <a href="#" class="navbar-link label-lg link:hover">About Us</a>
+            </li>
+            <li>
+              <a href="./careers.html" class="navbar-link label-lg link:hover"
+                >Careers</a
+              >
+            </li>
+            <li>
+              <a
+                href="./login.html"
+                class="navbar-link label-lg link:hover text-green-500"
+                id="navbar-login-logout"
+              ></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-action space-x-4">
+          <button class="btn-icon primary" aria-label="wallet">
+            <a class="flex items-center" href="./cart.html"
+              ><ion-icon
+                class="w-8 h-8 text-white"
+                name="cart-outline"
+              ></ion-icon
+            ></a>
+          </button>
+          <button
+            class="btn-icon profil-btn"
+            aria-label="Swiftbuy account: John Wick"
+          >
+            <a href="./profile.html">
+              <img
+                src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Z3bmxoc2RieG1hNXlvNXF1azkxOHVlbjliaTM4OWFhd2x6MW1wbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GLF8IKQ1Fvws3BzQ9v/giphy.gif"
+                width="50"
+                height="50"
+                alt="John Wick"
+                class="img-cover"
+            /></a>
+          </button>
+          <button
+            class="nav-toggle-btn"
+            aria-label="menu toggle"
+            data-nav-toggler
+          >
+            <ion-icon
+              name="menu-outline"
+              aria-hidden="true"
+              class="default-icon w-14 h-14 text-white"
+            ></ion-icon>
+            <ion-icon
+              name="close-outline"
+              aria-hidden="true"
+              class="active-icon w-14 h-14 text-white"
+            ></ion-icon>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="about-main">
+      <!-- About Hero Section -->
+      <section class="about-hero">
+        <div class="container about-hero-container">
+          <div class="about-hero-content">
+            <h1 class="about-hero-title">
+              Building a Unique Digital Marketplace
+            </h1>
+            <p class="about-hero-text">
+              At SwiftBuy, we're at the forefront of revolutionizing the stock
+              market through cutting-edge technology and innovative investment
+              tools. Our platform is more than just a marketplace for trading
+              stocks—it's a dynamic ecosystem where every trade carries the
+              potential for growth, learning, and financial success. SwiftBuy
+              stands out with its unique offerings—real-time analytics,
+              user-friendly interfaces, and educational resources that demystify
+              stock trading, making it accessible and profitable for traders of
+              all levels. Our dedication goes beyond providing a trading
+              platform; we're committed to empowering our users with the
+              knowledge and tools they need to make informed investment
+              decisions.
+
+              <br /><br />
+              We believe in the power of technology to transform the stock
+              market, making it more transparent, efficient, and adaptable. Our
+              platform integrates seamlessly with various financial networks and
+              tools, ensuring a trading experience that is not only reliable but
+              also expansive in its possibilities. By fostering a community of
+              informed investors and leveraging smart, secure technology,
+              SwiftBuy is redefining what it means to invest in the stock
+              market. Join us on this journey to navigate the exciting world of
+              financial markets with confidence and acumen. Pioneering in the
+              industry, SwiftBuy is your trusted partner in the pursuit of
+              financial excellence. Whether you're buying your first share or
+              managing a diverse portfolio, our platform is designed to help you
+              achieve your investment goals.
+
+              <br /><br />Experience the future of stock trading with SwiftBuy,
+              where every transaction is a step towards your financial freedom.
+            </p>
+          </div>
+          <div class="about-hero-img-wrapper">
+            <img
+              src="./assets/images/aboutUs.png"
+              alt="John Wick"
+              class="img-aboutUs"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- stats section -->
+      <section class="stats-section">
+        <div class="container">
+          <div class="stat">
+            <img
+              src="./assets/images/founded.png"
+              alt="Founded"
+              class="stat-icon"
+            />
+            <h3 class="stat-number">2017</h3>
+            <p class="stat-description">Founded</p>
+          </div>
+          <div class="stat">
+            <img
+              src="./assets/images/users.jpeg"
+              alt="Collections"
+              class="stat-icon"
+            />
+            <h3 class="stat-number">2M+</h3>
+            <p class="stat-description">Collections</p>
+          </div>
+          <div class="stat">
+            <img src="./assets/images/nfts.png" alt="NFTs" class="stat-icon" />
+            <h3 class="stat-number">80M+</h3>
+            <p class="stat-description">NFTs</p>
+          </div>
+          <div class="stat">
+            <img
+              src="./assets/images/volume.png"
+              alt="Volume"
+              class="stat-icon"
+            />
+            <h3 class="stat-number">$20B+</h3>
+            <p class="stat-description">Volume</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Story Section -->
+      <section class="story-section">
+        <div class="story-container">
+          <h2 class="story-heading">Our Story</h2>
+          <p class="story-paragraph">
+            SwiftBuy's journey began with a clear goal in mind: to revolutionize
+            the experience of stock trading. Our founders, with deep roots in
+            finance and technology, came together to create a platform that
+            empowers both novice and seasoned investors.
+          </p>
+          <p class="story-paragraph">
+            Through our innovative tools and educational resources, we're not
+            just a trading platform; we're a gateway to informed investment
+            decisions and financial success. We pride ourselves on creating a
+            user-friendly and secure environment where our community can thrive.
+          </p>
+          <p class="story-paragraph">
+            Join us as we continue to pave the way for a brighter financial
+            future, fostering a global community of investors who are just as
+            passionate about the markets as we are.
+          </p>
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section class="team-section">
+        <div class="container">
+          <h2 class="section-title">Our Incredible Team</h2>
+          <div class="team-grid">
+            <!-- Team Member -->
+            <div class="team-member">
+              <img
+                src="./assets/images/deep.jpeg"
+                alt="deep"
+                class="team-member-photo"
+              />
+              <h3 class="team-member-name">Deep Prajapati</h3>
+              <p class="team-member-role">Entrepreneur & Investor</p>
+            </div>
+            <div class="team-member">
+              <img
+                src="./assets/images/jainam.jpeg"
+                alt="jainam"
+                class="team-member-photo"
+              />
+              <h3 class="team-member-name">Jainam Patluwala</h3>
+              <p class="team-member-role">Entrepreneur & Investor</p>
+            </div>
+
+            <div class="team-member">
+              <img
+                src="./assets/images/profile.png"
+                alt="Monisha"
+                class="team-member-photo"
+              />
+              <h3 class="team-member-name">Monisha Ranjan</h3>
+              <p class="team-member-role">Entrepreneur & Investor</p>
+            </div>
+
+            <div class="team-member">
+              <img
+                src="./assets/images/sushma.jpeg"
+                alt="sushma"
+                class="team-member-photo"
+              />
+              <h3 class="team-member-name">Sushma Telagamsetti</h3>
+              <p class="team-member-role">Entrepreneur & Investor</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="why-choose-us" id="why-choose-us">
+        <h2>Why Choose Us</h2>
+        <ul class="benefits-list">
+          <li>
+            <h3>Expertise & Experience</h3>
+            <p>
+              With years of industry experience, we provide unmatched knowledge
+              and insights.
+            </p>
+          </li>
+          <li>
+            <h3>Quality Assurance</h3>
+            <p>
+              Our commitment to quality ensures you get the best products every
+              time.
+            </p>
+          </li>
+          <li>
+            <h3>Innovative Solutions</h3>
+            <p>
+              We're always at the forefront of technological advancements to
+              serve you better.
+            </p>
+          </li>
+          <li>
+            <h3>Customer Support</h3>
+            <p>
+              Our dedicated customer support team is here to assist you at every
+              step.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+     <!-- CTA Section -->
+     <section class="cta-section">
+      <div class="container">
+        <h2 class="cta-title">Get in Touch</h2>
+        <a href="contactUs.html" class="btn-primary">Contact Us</a>
+      </div><br>
+      <div id="map" style="width: 100%; height: 400px;"></div>
+
+    </section>
+
+    <!-- About Us HTML -->
+    <section class="qrcode-section">
+      <div class="qr-code-container">
+        <img src="./assets/images/qrcode.png" alt="Scan this QR code to get an exclusive offer" />
+        <p>Scan this QR code to access exclusive content and offers!</p>
+      </div>
+  </section>
+
+    </main>
+    
+    <!-- Footer start  -->
+
+    <footer class="footer text-[1.5em]">
+      <div class="section footer-top">
+        <div class="container">
+          <div class="footer-brand">
+            <a href="#">
+              <img
+                src="./assets/images/Light-Logo.png"
+                width="130"
+                height="28"
+                loading="lazy"
+                alt="Swiftbuy home"
+              />
+            </a>
+
+            <p class="body-md footer-text">
+              Buy, sell and discover exclusive digital assets by the top artists
+              of NFTs world.
+            </p>
+          </div>
+
+          <ul class="footer-list">
+            <li>
+              <p class="title-lg footer-list-title">Swiftbuy</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Explore Item</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Live Auction</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Activities</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Wallets</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Creators</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <p class="title-lg footer-list-title">Useful Links</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">About Us</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Blog & News</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Terms & Condition</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Privacy policy</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="./login.html" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span id="footer-login" class="span">Login</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Contact Us</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="footer-list">
+            <ul>
+              <li>
+                <p class="title-lg footer-list-title">
+                  Download the Swiftbuy app
+                </p>
+              </li>
+
+              <li class="footer-list-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/appstore.png"
+                    width="134"
+                    height="40"
+                    loading="lazy"
+                    alt="Download Swiftbuy app from AppStore"
+                  />
+                </a>
+
+                <a href="#">
+                  <img
+                    src="./assets/images/playstore.png"
+                    width="134"
+                    height="40"
+                    loading="lazy"
+                    alt="Download Swiftbuy app from PlayStore"
+                  />
+                </a>
+              </li>
+            </ul>
+
+            <ul>
+              <li>
+                <p class="title-lg footer-list-title">Contact Details</p>
+              </li>
+
+              <li class="footer-list-item">
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+                <a href="mailto:swiftbuy@nft.com" class="footer-link"
+                  >swiftbuy@nft.com</a
+                >
+              </li>
+
+              <li class="footer-list-item">
+                <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+
+                <a href="tel:+1 111-222-3333" class="footer-link"
+                  >+1 111-222-3333</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="body-md text-center copyright">
+            &copy; 2024 SwiftBuy, Made with 💚 by Canvas Alchemists.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer end  -->
+
+    <div class="body-bg-shape"></div>
+
+    <script src="./assets/js/about.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

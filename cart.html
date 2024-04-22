@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="./assets/css/cart.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./assets/images/favlogo.png" />
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="top">
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <a href="./index.html">
+          <img
+            src="./assets/images/Light-Logo.png"
+            width="130"
+            height="40"
+            alt="SwiftBuy home"
+            class="logo-small"
+          />
+          <img
+            src="./assets/images/Light-Logo.png"
+            width="150"
+            height="28"
+            alt="SwiftBuy home"
+            class="logo"
+          />
+        </a>
+
+        <!-- NAVBAR  -->
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="index.html" class="navbar-link label-lg link:hover"
+                >Home</a
+              >
+            </li>
+
+            <li>
+              <a href="./stats.html" class="navbar-link label-lg link:hover"
+                >Stats</a
+              >
+            </li>
+
+            <li>
+              <a href="./about.html" class="navbar-link label-lg link:hover"
+                >About Us</a
+              >
+            </li>
+
+            <li>
+              <a href="./careers.html" class="navbar-link label-lg link:hover"
+                >Careers</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="./login.html"
+                class="navbar-link label-lg link:hover"
+                id="navbar-login-logout"
+              ></a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-action space-x-4">
+          <button class="btn-icon primary" aria-label="wallet">
+            <a href="./cart.html"
+              ><ion-icon class="text-white" name="cart-outline"></ion-icon
+            ></a>
+          </button>
+
+          <a href="./profile.html">
+            <button
+              class="btn-icon profil-btn"
+              aria-label="Swiftbuy account: John Wick"
+            >
+              <img
+                src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Z3bmxoc2RieG1hNXlvNXF1azkxOHVlbjliaTM4OWFhd2x6MW1wbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GLF8IKQ1Fvws3BzQ9v/giphy.gif"
+                width="50"
+                height="50"
+                alt="John Wick"
+                class="img-cover"
+              />
+            </button>
+          </a>
+
+          <button
+            class="nav-toggle-btn"
+            aria-label="menu toggle"
+            data-nav-toggler
+          >
+            <ion-icon
+              name="menu-outline"
+              aria-hidden="true"
+              class="default-icon w-10 h-10 text-white"
+            ></ion-icon>
+
+            <ion-icon
+              name="close-outline"
+              aria-hidden="true"
+              class="active-icon w-10 h-10 text-white"
+            ></ion-icon>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex flex-col items-center w-[90%] mx-auto">
+      <!-- CART CARDS  -->
+      <div
+        class="p-6 w-full min-[375px]:p-4 sm:p-6 md:w-[80%] lg:w-[70%] xl:w-[70%] bg-gray-100 bg-opacity-10 mt-16 rounded-md text-white"
+      >
+        <div class="flex justify-between">
+          <a href="./index.html" class="flex items-center">
+            <ion-icon class="pr-2" name="arrow-back-outline"></ion-icon>
+            <h1 class="lg:text-xl">Cart</h1>
+          </a>
+          <div id="emptyCartButton" class="flex items-center cursor-pointer">
+            <ion-icon class="pr-2" name="trash-bin-outline"></ion-icon>
+            <h1 class="text-orange-500 lg:text-xl">Empty Cart</h1>
+          </div>
+        </div>
+        <hr class="mt-6 opacity-10" />
+
+        <!-- CARDS  -->
+        <div
+          class="text-left my-12 text-md sm:text-md lg:text-2xl"
+          id="cartItemsContainer"
+        >
+          <!-- Dynamic items will be appended here -->
+        </div>
+      </div>
+
+      <!-- CHECKOUT PROCEED  -->
+      <div
+        class="hidecheckout p-6 w-full md:w-[80%] lg:w-[60%] bg-gray-100 bg-opacity-10 mt-8 rounded-md text-white"
+      >
+        <h1 class="text-lg text-center lg:text-2xl">Order Summary</h1>
+        <hr class="mt-6 opacity-10" />
+        <div class="mt-8 flex justify-between">
+          <p>Total :</p>
+          <div>
+            <div class="flex">
+              <img
+                src="./assets/images/ethereum.svg"
+                width="16"
+                height="24"
+                loading="lazy"
+                alt="ethereum icon"
+              />
+              <p id="totalPrice" class="text-green-500 pl-2">Total: 0 ETH</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- </div> -->
+
+        <div
+          class="hidecheckout mt-6 flex items-center w-[95%] mx-auto justify-center"
+        >
+          <input
+            class="w-auto mr-4 text-gray-500"
+            type="checkbox"
+            name="agree"
+            id="agree"
+          />
+          <p class="text-sm">
+            I authorize Swiftbuy to use my personal information and agree to
+            their User Agreement and Buying Policy .
+          </p>
+        </div>
+
+        <a
+          href="./checkout.html"
+          id="proceedCheckout"
+          class="bg-green-500 w-[55%] md:w-[45%] mx-auto text-center text-white px-6 py-4 font-bold my-6 rounded-md"
+        >
+          Proceed Checkout
+        </a>
+      </div>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer text-[1em]">
+      <div class="section footer-top">
+        <div class="container">
+          <div class="footer-brand">
+            <a href="#">
+              <img
+                src="./assets/images/Light-Logo.png"
+                width="130"
+                height="28"
+                loading="lazy"
+                alt="Swiftbuy home"
+              />
+            </a>
+
+            <p class="footer-text">
+              Buy, sell and discover exclusive digital assets by the top artists
+              of NFTs world.
+            </p>
+          </div>
+
+          <ul class="footer-list">
+            <li>
+              <p class="text-[1.2em] font-bold text-white footer-list-title">
+                Swiftbuy
+              </p>
+            </li>
+
+            <li>
+              <a href="./stats.html" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Explore Item</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Live Auction</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Activities</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Wallets</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <p class="text-[1.2em] font-bold text-white footer-list-title">
+                Useful Links
+              </p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">About Us</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Blog & News</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Terms & Condition</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Privacy policy</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="./login.html" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span id="footer-login" class="span">Login</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="tel:+1 111-222-3333" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Contact Us</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="footer-list">
+            <ul>
+              <li>
+                <p class="text-[1.2em] font-bold text-white footer-list-title">
+                  Download the Swiftbuy app
+                </p>
+              </li>
+
+              <li class="footer-list-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/appstore.png"
+                    width="134"
+                    height="40"
+                    loading="lazy"
+                    alt="Download Swiftbuy app from AppStore"
+                  />
+                </a>
+
+                <a href="#">
+                  <img
+                    src="./assets/images/playstore.png"
+                    width="134"
+                    height="40"
+                    loading="lazy"
+                    alt="Download Swiftbuy app from PlayStore"
+                  />
+                </a>
+              </li>
+            </ul>
+
+            <ul>
+              <li>
+                <p class="text-[1.2em] font-bold text-white footer-list-title">
+                  Contact Details
+                </p>
+              </li>
+
+              <li class="footer-list-item">
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+                <a href="mailto:swiftbuy@nft.com" class="footer-link"
+                  >swiftbuy@nft.com</a
+                >
+              </li>
+
+              <li class="footer-list-item">
+                <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+
+                <a href="tel:+1 111-222-3333" class="footer-link"
+                  >+1 111-222-3333</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="text-center copyright">
+            &copy; 2024 SwiftBuy, Made with 💚 by Canvas Alchemists.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Background Gradient  -->
+    <div class="body-bg-shape"></div>
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/cart.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <!-- code for checking user is logged in than only can view cart page -->
+    <script>
+      //code to check user is logged in or not
+      if (!localStorage.getItem("currentUser")) {
+        window.location.href = "login.html";
+      }
+    </script>
+    <!-- end code for checking user is logged in than only can view cart page -->
+  </body>
+</html>

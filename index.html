@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>SwiftBuy - Discover Amazing collection of Arts & NFTs</title>
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./assets/images/favlogo.png" />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body id="top">
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <a href="#">
+          <img
+            src="./assets/images/Light-Logo.png"
+            width="130"
+            height="40"
+            alt="SwiftBuy home"
+            class="logo-small"
+          />
+          <img
+            src="./assets/images/Light-Logo.png"
+            width="150"
+            height="28"
+            alt="SwiftBuy home"
+            class="logo"
+          />
+        </a>
+
+        <!-- NAVBAR  -->
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="index.html" class="navbar-link label-lg link:hover"
+                >Home</a
+              >
+            </li>
+
+            <li>
+              <a href="./stats.html" class="navbar-link label-lg link:hover"
+                >Stats</a
+              >
+            </li>
+
+            <li>
+              <a href="about.html" class="navbar-link label-lg link:hover">About Us</a>
+            </li>
+
+            <li>
+              <a href="./careers.html" class="navbar-link label-lg link:hover">Careers</a>
+            </li>
+
+            <li>
+                <a href="./login.html" class="navbar-link label-lg link:hover text-green-500" id="navbar-login-logout"></a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-action space-x-4">
+          <button class="btn-icon primary" aria-label="wallet">
+            <a href="./cart.html"><ion-icon class="w-8 h-8 text-white" name="cart-outline"></ion-icon></a>
+          </button>
+          <button
+          
+            class="btn-icon profil-btn"
+            aria-label="Swiftbuy account: John Wick"
+          >
+          <a href="./profile.html">
+            <img
+              src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Z3bmxoc2RieG1hNXlvNXF1azkxOHVlbjliaTM4OWFhd2x6MW1wbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GLF8IKQ1Fvws3BzQ9v/giphy.gif"
+              width="50"
+              height="50"
+              alt="John Wick"
+              class="img-cover"
+            /></a>
+          </button>
+        </a>
+          <button
+            class="nav-toggle-btn"
+            aria-label="menu toggle"
+            data-nav-toggler
+          >
+            <ion-icon
+              name="menu-outline"
+              aria-hidden="true"
+              class="default-icon w-14 h-14 text-white"
+            ></ion-icon>
+
+            <ion-icon
+              name="close-outline"
+              aria-hidden="true"
+              class="active-icon w-14 h-14 text-white"
+            ></ion-icon>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- 
+        - #HERO SECTION
+      -->
+
+        <section class="section hero" aria-label="home">
+          <div class="container">
+            <div class="relative bg-black w-full h-[100%] z-[1] rounded-xl hidden md:block lg:block"><img class="mx-auto w-[50%] rounded-xl mb-12" src="./assets/images/nft1.gif"></img> <p class="absolute text-[1.5em] flex bottom-6 left-6 text-gray-500">Visual by <span class="font-bold">&nbsp;@eduard_ov</span></p></div>
+
+            <h1 class="headline-lg hero-title mt-0 mx-auto w-[80%]">
+              Discover Amazing collection of
+              <span class="span">Arts & NFTs</span>
+            </h1>
+
+            <p class="section-text body-lg w-[70%] mx-auto text-[1.5em] md:text-[2em]">
+              We are a massive marketplace committed to uniting outstanding
+              artists from all SwiftBuy with their fans and dedicated token
+              collectors!
+            </p>
+
+            <a href="./stats.html" class="btn">Explore now</a>
+          </div>
+        </section>
+
+        <!-- 
+        - #TOP COLLECTION
+      -->
+
+      <section
+      class="section top-collection"
+      aria-labelledby="collection-label"
+    >
+      <div class="container">
+        <div class="title-wrapper">
+          <h2
+            class="headline-md section-title text-center"
+            id="collection-label"
+          >
+            Top Collections
+          </h2>
+
+          <a href="#" class="btn-link link:hover">
+            <span class="span text-[2em]">See More</span>
+
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+        </div>
+
+        <div class="slider" data-slider>
+          <ul class="slider-container" data-slider-container>
+            <li class="slider-item">
+              <div class="collection-card card">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 500; --height: 500"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1694434943114-c8ea2049f781?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                    alt="Digital Collection"
+                    class="img-cover"
+                  />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-profile">
+                    <img
+                      src="https://images.unsplash.com/photo-1643888193686-81c45c445b95?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      width="64"
+                      height="64"
+                      loading="lazy"
+                      alt="CutieGirl profile"
+                    />
+
+                    <ion-icon
+                      name="checkmark-circle"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </div>
+
+                  <h3 class="title-md card-title">
+                    <a href="#" class="link:hover">Digital Collection</a>
+                  </h3>
+
+                  <p class="label-md card-author">
+                    by <a href="#" class="link">@CutieGirl</a>
+                  </p>
+
+                  <p class="card-text">25 Items</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="slider-item">
+              <div class="collection-card card">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 500; --height: 500"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1642427749670-f20e2e76ed8c?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                    alt="GIF Collection"
+                    class="img-cover"
+                  />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-profile">
+                    <img
+                      src="https://plus.unsplash.com/premium_photo-1682125340805-c01b8a9a7aee?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      width="64"
+                      height="64"
+                      loading="lazy"
+                      alt="ButterFly profile"
+                    />
+
+                    <ion-icon
+                      name="checkmark-circle"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </div>
+
+                  <h3 class="title-md card-title">
+                    <a href="#" class="link:hover">GIF Collection</a>
+                  </h3>
+
+                  <p class="label-md card-author">
+                    by <a href="#" class="link">@ButterFly</a>
+                  </p>
+
+                  <p class="card-text">25 Items</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="slider-item">
+              <div class="collection-card card">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 500; --height: 500"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1677653113149-d55afd582488?q=80&w=1960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                    alt="Sports Collection"
+                    class="img-cover"
+                  />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-profile">
+                    <img
+                      src="https://images.unsplash.com/photo-1699210801434-2bcc167fc18a?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      width="64"
+                      height="64"
+                      loading="lazy"
+                      alt="NorseQueen profile"
+                    />
+
+                    <ion-icon
+                      name="checkmark-circle"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </div>
+
+                  <h3 class="title-md card-title">
+                    <a href="#" class="link:hover">Sports Collection</a>
+                  </h3>
+
+                  <p class="label-md card-author">
+                    by <a href="#" class="link">@NorseQueen</a>
+                  </p>
+
+                  <p class="card-text">25 Items</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="slider-item">
+              <div class="collection-card card">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 500; --height: 500"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1648293981217-420f71485b59?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                    alt="Photography Collection"
+                    class="img-cover"
+                  />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-profile">
+                    <img
+                      src="https://plus.unsplash.com/premium_photo-1682125227290-f62abb91ed5b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      width="64"
+                      height="64"
+                      loading="lazy"
+                      alt="BigBull profile"
+                    />
+
+                    <ion-icon
+                      name="checkmark-circle"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </div>
+
+                  <h3 class="title-md card-title">
+                    <a href="#" class="link:hover"
+                      >Photography Collection</a
+                    >
+                  </h3>
+
+                  <p class="label-md card-author">
+                    by <a href="#" class="link">@BigBull</a>
+                  </p>
+
+                  <p class="card-text">25 Items</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="slider-item">
+              <div class="collection-card card">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 500; --height: 500"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1945&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                    alt="Illustrations Collection"
+                    class="img-cover"
+                  />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-profile">
+                    <img
+                      src="https://images.unsplash.com/photo-1618352357270-ef40d25bcef8?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      width="64"
+                      height="64"
+                      loading="lazy"
+                      alt="Angel profile"
+                    />
+
+                    <ion-icon
+                      name="checkmark-circle"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </div>
+
+                  <h3 class="title-md card-title">
+                    <a href="#" class="link:hover"
+                      >Illustrations Collection</a
+                    >
+                  </h3>
+
+                  <p class="label-md card-author">
+                    by <a href="#" class="link">@Angel</a>
+                  </p>
+
+                  <p class="card-text">25 Items</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="slider-item">
+              <div class="collection-card card">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 500; --height: 500"
+                >
+                  <img
+                    src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Z3bmxoc2RieG1hNXlvNXF1azkxOHVlbjliaTM4OWFhd2x6MW1wbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GLF8IKQ1Fvws3BzQ9v/giphy.gif"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                    alt="Animations Collection"
+                    class="img-cover"
+                  />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-profile">
+                    <img
+                      src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjJiMmk4OXVwOW5heTJqeHdnb3FyMDh0Zmx6dGRpdXBweXV6c282ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HifsMXFLaRsmQlx8jo/giphy.gif"
+                      width="64"
+                      height="64"
+                      loading="lazy"
+                      alt="CrazyAnyone profile"
+                    />
+
+                    <ion-icon
+                      name="checkmark-circle"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </div>
+
+                  <h3 class="title-md card-title">
+                    <a href="#" class="link:hover">Animations Collection</a>
+                  </h3>
+
+                  <p class="label-md card-author">
+                    by <a href="#" class="link">@CrazyAnyone</a>
+                  </p>
+
+                  <p class="card-text">25 Items</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <button
+            class="slider-btn prev"
+            aria-label="Slide to previous item"
+            data-slider-prev
+          >
+            <ion-icon
+              name="chevron-back-sharp"
+              aria-hidden="true"
+            ></ion-icon>
+          </button>
+
+          <button
+            class="slider-btn next"
+            aria-label="Slide to next item"
+            data-slider-next
+          >
+            <ion-icon
+              name="chevron-forward-sharp"
+              aria-hidden="true"
+            ></ion-icon>
+          </button>
+        </div>
+
+        <a href="#" class="btn-link link:hover">
+          <span class="span text-[2em] min-[375px]:text-[1.8em]">See More</span>
+
+          <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+        </a>
+      </div>
+    </section>
+
+<!-- 
+        - #DISCOVER ITEM
+      -->
+
+      <section class="section discover" aria-labelledby="discover-label">
+        <div class="container">
+          <h2
+            class="headline-md section-title text-left sm:text-center text-center min-[375px]:text-center"
+            id="discover-label"
+          >
+            Discover Items
+          </h2>
+
+          <ul class="grid-list">
+            <li>
+              <div class="discover-card card">
+                <div
+                  class="card-banner img-holder"
+                  style="--width: 500; --height: 500"
+                >
+                  <img
+                    src="./assets/images/nft2.gif"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                    alt="Fantasy Crustal"
+                    class="img-cover"
+                  />
+
+                  <button onclick="addToCart(this)" class="btn btn-primary hidden sm:hidden md:flex md:block lg:flex lg:block xl:flex xl:block">
+                    <ion-icon name="flash" aria-hidden="true"></ion-icon>
+
+                    <span class="span">Add to cart</span>
+                  </button>
+                </div>
+
+                <div class="card-profile">
+                  <img
+                    src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWt5amV5a3h3aW5paXNnZG14aHhlZ204ajdmdTQ4NGt4eGx1aW9kaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/580DvWH0jDbq7J2S26/giphy.gif"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="13imperial profile"
+                    class="img object-contain"
+                  />
+
+                  <a href="#" class="link:hover">@13imperial</a>
+                </div>
+
+                <h3 class="title-sm card-title flex justify-between items-center">
+                  <a href="#" class="link:hover">Fantasy Crystal #3902</a>
+                  <button onclick="addToCart(this)"  class="max-[767px]:block md:block md:text-md m-2 bg-[#1ace29] p-4 rounded-xl lg:hidden xl:hidden">Add to cart</button>
+                  </h3>
+
+                <div class="card-meta">
+                  <div>
+                    <p>Price</p>
+
+                    <div class="card-price">
+                      <img
+                        src="./assets/images/ethereum.svg"
+                        width="16"
+                        height="24"
+                        loading="lazy"
+                        alt="ethereum icon"
+                      />
+
+                      <span class="span">3.5 ETH</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="discover-card card">
+                <div
+                  class="card-banner img-holder"
+                  style="--width: 500; --height: 500"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1668953296563-2f4e3e043929?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                    alt="Windchime #768"
+                    class="img-cover"
+                  />
+
+                  <button onclick="addToCart(this)" class="btn btn-primary hidden sm:hidden md:flex md:block lg:flex lg:block xl:flex xl:block">
+                    <ion-icon name="flash" aria-hidden="true"></ion-icon>
+
+                    <span class="span">Add to cart</span>
+                  </button>
+
+                 
+                </div>
+
+                <div class="card-profile">
+                  <img
+                    src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2RheGxvOXFkbXJrc2x6NmR4djlvMWNweWIxMjliNGh2Z2J4bzc0dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7TKzyIPAiMR1pErK/giphy.gif"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="CutieGirl profile"
+                    class="img"
+                  />
+
+                  <a href="#" class="link:hover">@CutieGirl</a>
+                </div>
+
+                <h3 class="title-sm card-title flex justify-between items-center">
+                  <a href="#" class="link:hover">Windchime #768</a>
+                  <button onclick="addToCart(this)"  class="block m-2 bg-[#1ace29] p-4 rounded-xl max-[768px]:block md:block md:text-md d:text-md lg:hidden xl:hidden">Add to cart</button>
+                </h3>
+
+                <div class="card-meta">
+                  <div>
+                    <p>Price</p>
+
+                    <div class="card-price">
+                      <img
+                        src="./assets/images/ethereum.svg"
+                        width="16"
+                        height="24"
+                        loading="lazy"
+                        alt="ethereum icon"
+                      />
+
+                      <span class="span">4.5 ETH</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="discover-card card">
+                <div
+                  class="card-banner img-holder"
+                  style="--width: 500; --height: 500"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1618504055346-03094740c7a5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                    alt="Probably A Label #3277"
+                    class="img-cover"
+                  />
+
+                  <button onclick="addToCart(this)" class="btn btn-primary hidden sm:hidden md:flex md:block lg:flex lg:block xl:flex xl:block">
+                    <ion-icon name="flash" aria-hidden="true"></ion-icon>
+
+                    <span class="span">Add to cart</span>
+                  </button>
+                </div>
+
+                <div class="card-profile">
+                  <img
+                    src="https://images.pexels.com/photos/8830979/pexels-photo-8830979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="ButterFly profile"
+                    class="img"
+                  />
+
+                  <a href="#" class="link:hover">@ButterFly</a>
+                </div>
+
+                <h3 class="title-sm card-title flex justify-between items-center">
+                  <a href="#" class="link:hover">Probably A Label #
+                    3277</a>
+                    <button onclick="addToCart(this)" class="block m-2 bg-[#1ace29] p-4 rounded-xl max-[768px]:blockmd:block md:text-md  lg:hidden xl:hidden">Add to cart</button>
+                    </h3>
+    
+
+                <div class="card-meta">
+                  <div>
+                    <p>Price</p>
+
+                    <div class="card-price">
+                      <img
+                        src="./assets/images/ethereum.svg"
+                        width="16"
+                        height="24"
+                        loading="lazy"
+                        alt="ethereum icon"
+                      />
+
+                      <span class="span">2.5 ETH</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="discover-card card">
+                <div
+                  class="card-banner img-holder"
+                  style="--width: 500; --height: 500"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1641391503184-a2131018701b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                    alt="Probably A Label #1711"
+                    class="img-cover"
+                  />
+
+                  <button onclick="addToCart(this)" class="btn btn-primary hidden sm:hidden md:flex md:block lg:flex lg:block xl:flex xl:block">
+                    <ion-icon name="flash" aria-hidden="true"></ion-icon>
+
+                    <span class="span">Add to cart</span>
+                  </button>
+                </div>
+
+                <div class="card-profile">
+                  <img
+                    src="https://images.pexels.com/photos/5667448/pexels-photo-5667448.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="NorseQueen profile"
+                    class="img"
+                  />
+
+                  <a href="#" class="link:hover">@NorseQueen</a>
+                </div>
+
+                <h3 class="title-sm card-title flex justify-between items-center">
+                  <a href="#" class="link:hover">IshowSpeed</a>
+                  <button onclick="addToCart(this)"  class="block m-2 bg-[#1ace29] p-4 rounded-xl max-[768px]:block md:block md:text-md lg:hidden xl:hidden">Add to cart</button>
+                </h3>
+
+                <div class="card-meta">
+                  <div>
+                    <p>Price</p>
+
+                    <div class="card-price">
+                      <img
+                        src="./assets/images/ethereum.svg"
+                        width="16"
+                        height="24"
+                        loading="lazy"
+                        alt="ethereum icon"
+                      />
+
+                      <span class="span">5.5 ETH</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="discover-card card">
+                <div
+                  class="card-banner img-holder"
+                  style="--width: 500; --height: 500"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1642059893618-22daf30e92a2?q=80&w=1966&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                    alt="Shibuya Scramble Punks"
+                    class="img-cover"
+                  />
+
+                  <button onclick="addToCart(this)" class="btn btn-primary hidden sm:hidden md:flex md:block lg:flex lg:block xl:flex xl:block">
+                    <ion-icon name="flash" aria-hidden="true"></ion-icon>
+
+                    <span class="span">Add to cart</span>
+                  </button>
+                </div>
+
+                <div class="card-profile">
+                  <img
+                    src="https://wallpapers.com/images/high/nft-monkey-lu1bcqt434m8ehzw.webp"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="BigBull profile"
+                    class="img"
+                  />
+
+                  <a href="#" class="link:hover">@BigBull</a>
+                </div>
+
+                <h3 class="title-sm card-title flex justify-between items-center">
+                  <a href="#" class="link:hover">Shibuya Scramble P
+                    unks</a>
+                    <button onclick="addToCart(this)" class="block m-2 bg-[#1ace29] p-4 rounded-xl max-[768px]:blockmd:block md:text-md lg:hidden xl:hidden">Add to cart</button>
+                </h3>
+
+                <div class="card-meta">
+                  <div>
+                    <p>Price</p>
+
+                    <div class="card-price">
+                      <img
+                        src="./assets/images/ethereum.svg"
+                        width="16"
+                        height="24"
+                        loading="lazy"
+                        alt="ethereum icon"
+                      />
+
+                      <span class="span">7.5 ETH</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="discover-card card">
+                <div
+                  class="card-banner img-holder"
+                  style="--width: 500; --height: 500"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1617791160512-45c186e50c5a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                    alt="Probably A Label #650"
+                    class="img-cover"
+                  />
+
+                  <button onclick="addToCart(this)" class="btn btn-primary hidden sm:hidden md:flex md:block lg:flex lg:block xl:flex xl:block">
+                    <ion-icon name="flash" aria-hidden="true"></ion-icon>
+
+                    <span class="span">Add to cart</span>
+                  </button>
+                </div>
+
+                <div class="card-profile">
+                  <img
+                    src="https://cdna.artstation.com/p/assets/images/images/027/164/746/large/prashan-subasinghe-phelps-01.jpg?1590764030"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="Angel profile"
+                    class="img"
+                  />
+
+                  <a href="#" class="link:hover">@Angel</a>
+                </div>
+
+                <h3 class="title-sm card-title flex justify-between items-center">
+                  <a href="#" class="link:hover">Toham650</a>
+                    <button onclick="addToCart(this)" class="block m-2 bg-[#1ace29] p-4 rounded-xl max-[768px]:blockmd:block md:text-md lg:hidden xl:hidden">Add to cart</button>
+                </h3>
+
+                <div class="card-meta">
+                  <div>
+                    <p>Price</p>
+
+                    <div class="card-price">
+                      <img
+                        src="./assets/images/ethereum.svg"
+                        width="16"
+                        height="24"
+                        loading="lazy"
+                        alt="ethereum icon"
+                      />
+
+                      <span class="span">3.5 ETH</span>
+                    </div>
+                  </div>
+
+                 
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="discover-card card">
+                <div
+                  class="card-banner img-holder"
+                  style="--width: 500; --height: 500"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1633633749183-2b804f9f8159?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                    alt="Looki #0147"
+                    class="img-cover"
+                  />
+
+                  <button onclick="addToCart(this)" class="btn btn-primary hidden sm:hidden md:flex md:block lg:flex lg:block xl:flex xl:block">
+                    <ion-icon name="flash" aria-hidden="true"></ion-icon>
+
+                    <span class="span">Add to cart</span>
+                  </button>
+                </div>
+
+                <div class="card-profile">
+                  <img
+                    src="https://cdna.artstation.com/p/assets/images/images/067/245/868/4k/iain-goodyear-hex-abstract-7-1-edit.jpg?1694904365"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="CrazyAnyone profile"
+                    class="img"
+                  />
+
+                  <a href="#" class="link:hover">@CrazyAnyone</a>
+                </div>
+
+                <h3 class="title-sm card-title flex justify-between items-center">
+                  <a href="#" class="link:hover">Looki #0147</a>
+                  <button onclick="addToCart(this)" class="block m-2 bg-[#1ace29] p-4 rounded-xl max-[768px]:blockmd:block md:text-md lg:hidden xl:hidden">Add to cart</button>
+                </h3>
+
+                <div class="card-meta">
+                  <div>
+                    <p>Price</p>
+
+                    <div class="card-price">
+                      <img
+                        src="./assets/images/ethereum.svg"
+                        width="16"
+                        height="24"
+                        loading="lazy"
+                        alt="ethereum icon"
+                      />
+
+                      <span class="span">6.5 ETH</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="discover-card card">
+                <div
+                  class="card-banner img-holder"
+                  style="--width: 500; --height: 500"
+                >
+                  <img
+                    src="./assets/images/nft3.png"
+                    width="500"
+                    height="500"
+                    loading="lazy"
+                    alt="Poob #285"
+                    class="img-cover"
+                  />
+
+                  <button onclick="addToCart(this)" class="btn btn-primary hidden sm:hidden md:flex md:block lg:flex lg:block xl:flex xl:block">
+                    <ion-icon name="flash" aria-hidden="true"></ion-icon>
+
+                    <span class="span">Add to cart</span>
+                  </button>
+                </div>
+
+                <div class="card-profile">
+                  <img
+                    src="https://cdnb.artstation.com/p/assets/images/images/044/941/887/4k/michael-weisheim-tronwars-07.jpg?1641539317"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    alt="Princess profile"
+                    class="img"
+                  />
+
+                  <a href="#" class="link:hover">@Princess</a>
+                </div>
+
+                <h3 class="title-sm card-title flex justify-between items-center">
+                  <a href="#" class="link:hover">Poob #285</a>
+                  <button onclick="addToCart(this)"  class="block m-2 bg-[#1ace29] p-4 rounded-xl max-[768px]:block md:block md:text-md lg:hidden xl:hidden">Add to cart</button>
+    
+                </h3>
+
+                <div class="card-meta">
+                  <div>
+                    <p>Price</p>
+
+                    <div class="card-price">
+                      <img
+                        src="./assets/images/ethereum.svg"
+                        width="16"
+                        height="24"
+                        loading="lazy"
+                        alt="ethereum icon"
+                      />
+
+                      <span class="span">3.5 ETH</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <a href="./stats.html" class="btn-link link:hover">
+            <span class="span text-[2em] sm:text-center min-[375px]:text-[1.8em] text-white hover:text-[#1ace29]">Explore More</span>
+
+            <ion-icon class="text-white" name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+        </div>
+      </section>
+
+      <!-- 
+        - SELLERS
+      -->
+
+      <section class="section sellers" aria-labelledby="sellers-label">
+        <div class="container">
+          <h2
+            class="headline-md section-title text-center"
+            id="sellers-label"
+          >
+            Best Creators & Sellers
+          </h2>
+
+          <ul class="grid-list">
+            <li>
+              <div class="seller-card card">
+                <figure class="card-banner">
+                  <img
+                    src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXBseGlqbzhydXJ6NTIxZ3o5a3NxMThsbGVwOGN2N2dqdmsxMXFmdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1gbqIc1fK8QgR3bHL7/giphy.gif  "
+                    width="64"
+                    height="64"
+                    loading="lazy"
+                    alt="Steven Townsend profile"
+                  />
+
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                </figure>
+
+                <div class="card-title-wrapper">
+                  <h3 class="title-sm">
+                    <a href="#" class="link:hover">Haven Townsend</a>
+                  </h3>
+
+                  <p class="user-name label-md">@Zolok</p>
+                </div>
+
+                <button
+                  class="btn-icon outline"
+                  aria-label="Hire Steven Townsend"
+                >
+                  <ion-icon
+                    name="person-add-outline"
+                    aria-hidden="true"
+                  ></ion-icon>
+                </button>
+              </div>
+            </li>
+
+            <li>
+              <div class="seller-card card">
+                <figure class="card-banner">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2022/02/23/15/56/technology-7030913_1280.png"
+                    width="64"
+                    height="64"
+                    loading="lazy"
+                    alt="Tiffany Betancourt profile"
+                  />
+
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                </figure>
+
+                <div class="card-title-wrapper">
+                  <h3 class="title-sm">
+                    <a href="#" class="link:hover">Ethan Brown</a>
+                  </h3>
+
+                  <p class="user-name label-md">@ArtAlchemy</p>
+                </div>
+
+                <button
+                  class="btn-icon outline"
+                  aria-label="Hire Tiffany Betancourt"
+                >
+                  <ion-icon
+                    name="person-add-outline"
+                    aria-hidden="true"
+                  ></ion-icon>
+                </button>
+              </div>
+            </li>
+
+            <li>
+              <div class="seller-card card">
+                <figure class="card-banner">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2022/02/14/02/52/monkey-7012380_1280.png"
+                    width="64"
+                    height="64"
+                    loading="lazy"
+                    alt="Jacqueline Burns profile"
+                  />
+
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                </figure>
+
+                <div class="card-title-wrapper">
+                  <h3 class="title-sm">
+                    <a href="#" class="link:hover">Sarah Patel</a>
+                  </h3>
+
+                  <p class="user-name label-md">@TokenTinkerer</p>
+                </div>
+
+                <button
+                  class="btn-icon outline"
+                  aria-label="Hire Jacqueline Burns"
+                >
+                  <ion-icon
+                    name="person-add-outline"
+                    aria-hidden="true"
+                  ></ion-icon>
+                </button>
+              </div>
+            </li>
+
+            <li>
+              <div class="seller-card card">
+                <figure class="card-banner">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2022/03/08/16/06/nft-7056054_1280.jpg"
+                    width="64"
+                    height="64"
+                    loading="lazy"
+                    alt="Mari Harrington profile"
+                  />
+
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                </figure>
+
+                <div class="card-title-wrapper">
+                  <h3 class="title-sm">
+                    <a href="#" class="link:hover">Emily Johnson</a>
+                  </h3>
+
+                  <p class="user-name label-md">@VirtualVoyager</p>
+                </div>
+
+                <button
+                  class="btn-icon outline"
+                  aria-label="Hire Mari Harrington"
+                >
+                  <ion-icon
+                    name="person-add-outline"
+                    aria-hidden="true"
+                  ></ion-icon>
+                </button>
+              </div>
+            </li>
+
+            <li>
+              <div class="seller-card card">
+                <figure class="card-banner">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2019/03/19/15/03/fantasy-4065924_1280.jpg"
+                    width="64"
+                    height="64"
+                    loading="lazy"
+                    alt="Floyd Glasgow profile"
+                  />
+
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                </figure>
+
+                <div class="card-title-wrapper">
+                  <h3 class="title-sm">
+                    <a href="#" class="link:hover">Xavier Rodriguez</a>
+                  </h3>
+
+                  <p class="user-name label-md">@DigitalDynamo</p>
+                </div>
+
+                <button
+                  class="btn-icon outline"
+                  aria-label="Hire Floyd Glasgow"
+                >
+                  <ion-icon
+                    name="person-add-outline"
+                    aria-hidden="true"
+                  ></ion-icon>
+                </button>
+              </div>
+            </li>
+
+            <li>
+              <div class="seller-card card">
+                <figure class="card-banner">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2023/01/15/19/15/nft-7720892_1280.jpg"
+                    width="64"
+                    height="64"
+                    loading="lazy"
+                    alt="Donna Schultz profile"
+                  />
+
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                </figure>
+
+                <div class="card-title-wrapper">
+                  <h3 class="title-sm">
+                    <a href="#" class="link:hover">Sophia Nguyen</a>
+                  </h3>
+
+                  <p class="user-name label-md">@PixelPioneer</p>
+                </div>
+
+                <button
+                  class="btn-icon outline"
+                  aria-label="Hire Donna Schultz"
+                >
+                  <ion-icon
+                    name="person-add-outline"
+                    aria-hidden="true"
+                  ></ion-icon>
+                </button>
+              </div>
+            </li>
+
+            <li>
+              <div class="seller-card card">
+                <figure class="card-banner">
+                  <img
+                    src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYm8wajF3bGFmejNsdjliZTF6eXBtbXducWQ0MGdpdDd6Y2dmMHhvcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3FjEPbKqEPhPpmC8uY/giphy.gif"
+                    width="64"
+                    height="64"
+                    loading="lazy"
+                    alt="Joshua Morris profile"
+                  />
+
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                </figure>
+
+                <div class="card-title-wrapper">
+                  <h3 class="title-sm">
+                    <a href="#" class="link:hover">David Thompson</a>
+                  </h3>
+
+                  <p class="user-name label-md">@EtherArtist</p>
+                </div>
+
+                <button
+                  class="btn-icon outline"
+                  aria-label="Hire Joshua Morris"
+                >
+                  <ion-icon
+                    name="person-add-outline"
+                    aria-hidden="true"
+                  ></ion-icon>
+                </button>
+              </div>
+            </li>
+
+            <li>
+              <div class="seller-card card">
+                <figure class="card-banner">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2020/11/29/04/02/hand-5786371_1280.jpg"
+                    width="64"
+                    height="64"
+                    loading="lazy"
+                    alt="Rosaria Vargas profile"
+                  />
+
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                </figure>
+
+                <div class="card-title-wrapper">
+                  <h3 class="title-sm">
+                    <a href="#" class="link:hover">Jasmine Lee</a>
+                  </h3>
+
+                  <p class="user-name label-md">@BlockchainBrush</p>
+                </div>
+
+                <button
+                  class="btn-icon outline"
+                  aria-label="Hire Rosaria Vargas"
+                >
+                  <ion-icon
+                    name="person-add-outline"
+                    aria-hidden="true"
+                  ></ion-icon>
+                </button>
+              </div>
+            </li>
+
+            <li>
+              <div class="seller-card card">
+                <figure class="card-banner">
+                  <img
+                    src="./assets/images/avatar-2.jpg"
+                    width="64"
+                    height="64"
+                    loading="lazy"
+                    alt="Carl Williams profile"
+                  />
+
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                </figure>
+
+                <div class="card-title-wrapper">
+                  <h3 class="title-sm">
+                    <a href="#" class="link:hover">Michael Garcia</a>
+                  </h3>
+
+                  <p class="user-name label-md">@NiftyNomad</p>
+                </div>
+
+                <button
+                  class="btn-icon outline"
+                  aria-label="Hire Carl Williams"
+                >
+                  <ion-icon
+                    name="person-add-outline"
+                    aria-hidden="true"
+                  ></ion-icon>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+<!-- 
+        - #QNA
+      -->
+
+      <section class="section qna" aria-label="question and answer">
+        <div class="container">
+          <h2 class="headline-md section-title text-center">Q&A</h2>
+
+          <p class="section-text body-md text-center">
+            We are a huge marketplace dedicated to connecting great artists of
+            all Swiftbuy with their fans and unique token collectors!
+          </p>
+
+          <ul class="qna-list">
+            <li class="qna-item">
+              <div class="qna-card" data-accordion>
+                <button class="qna-btn" data-accordion-btn>
+                  <h3 class="title-sm">How does it work ?</h3>
+
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </button>
+
+                <div class="qna-content">
+                  <p class="body-md">
+                    NFT marketplaces are where you can list your NFT for sale. They look a lot like auction houses. NFTs are auctioned off, just like real artwork, and the highest bidder wins the prize. The more people bid, the higher the price will be. This is why collections sell so easily: they create scarcity, which increases the value of the NFT and thus the price. 
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="qna-item">
+              <div class="qna-card" data-accordion>
+                <button class="qna-btn" data-accordion-btn>
+                  <h3 class="title-sm">
+                    Do I need a designer to use Swiftbuy ?
+                  </h3>
+
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </button>
+
+                <div class="qna-content">
+                  <p class="body-md">
+                    No, you are not required to be a designer to use an NFT (Non-Fungible Token) marketplace. NFT marketplaces are platforms where digital assets such as artwork, music, videos, and even virtual real estate can be purchased, sold, and traded via blockchain technology. While some users use these platforms to create and sell their own digital creations, others act as collectors or investors, buying NFTs created by artists and creators.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="qna-item">
+              <div class="qna-card" data-accordion>
+                <button class="qna-btn" data-accordion-btn>
+                  <h3 class="title-sm">
+                    What do I need to do to start selling ?
+                  </h3>
+
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </button>
+
+                <div class="qna-content">
+                  <p class="body-md">
+                    To enter the NFT marketplace using Swiftbuy, learn about NFTs and blockchain, set up a digital wallet, create or buy NFTs, list them for sale, promote via social media, and manage transactions. These steps will kickstart your journey, irrespective of your design skills.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="qna-item">
+              <div class="qna-card" data-accordion>
+                <button class="qna-btn" data-accordion-btn>
+                  <h3 class="title-sm">
+                    What are blockchain gas fees?
+                  </h3>
+
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </button>
+
+                <div class="qna-content">
+                  <p class="body-md">
+                    Blockchain gas fees, also known simply as "gas fees," are the costs associated with making transactions or executing smart contracts on a blockchain network. Gas fees exist primarily on networks like Ethereum, which rely on a Proof of Work (PoW) or Proof of Stake (PoS) consensus mechanism.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 
+        - #CONTACT
+      -->
+
+      <section class="section contact" aria-label="contact">
+        <div class="container">
+          <h2 class="headline-md section-title text-center">
+            Have Question ? Get in touch!
+          </h2>
+
+          <p class="body-md section-text text-center">
+            We are a huge marketplace dedicated to connecting great artists of
+            all Swiftbuy with their fans and unique token collectors!
+          </p>
+
+          <a href="mailto:swiftbuy@nft.com" class="btn btn-primary">
+            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+
+            <span class="span">Contact us</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 
+        - #NEWSLETTER
+      -->
+
+      <section class="section newsletter" aria-label="newsletter">
+        <div class="container">
+          <div class="newsletter-card">
+            <div>
+              <h3 class="headline-md text-center">
+                Subscribe to Newsletter!
+              </h3>
+
+              <p class="body-md card-text text-center">
+                Subscribe to get latest updates and information.
+              </p>
+            </div>
+
+            <div class="input-wrapper">
+              <input
+                type="email"
+                name="email_address"
+                placeholder="Enter your email"
+                required
+                class="input-field"
+              />
+
+              <button class="btn btn-primary hidden sm:hidden">Subscribe</button>
+            </div>
+
+            <ion-icon
+              name="mail-open-outline"
+              aria-hidden="true"
+              class="bg-icon bg-icon-1"
+            ></ion-icon>
+
+            <ion-icon
+              name="document-text-outline"
+              aria-hidden="true"
+              class="bg-icon bg-icon-2"
+            ></ion-icon>
+          </div>
+        </div>
+      </section>
+       
+      </article>
+    </main>
+
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer text-[1.5em]">
+      <div class="section footer-top">
+        <div class="container">
+          <div class="footer-brand">
+            <a href="#">
+              <img
+                src="./assets/images/Light-Logo.png"
+                width="130"
+                height="28"
+                loading="lazy"
+                alt="Swiftbuy home"
+              />
+            </a>
+
+            <p class="body-md footer-text">
+              Buy, sell and discover exclusive digital assets by the top artists
+              of NFTs world.
+            </p>
+          </div>
+
+          <ul class="footer-list">
+            <li>
+              <p class="title-lg footer-list-title">Swiftbuy</p>
+            </li>
+
+            <li>
+              <a href="./stats.html" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Explore Item</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Live Auction</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Activities</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Wallets</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <p class="title-lg footer-list-title">Useful Links</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">About Us</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Blog & News</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Terms & Condition</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Privacy policy</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="./login.html" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span id="footer-login" class="span">Login</span>
+
+
+              </a>
+            </li>
+
+            <li>
+              <a href="tel:+1 111-222-3333" class="footer-link">
+                <ion-icon name="chevron-forward"></ion-icon>
+
+                <span class="span">Contact Us</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="footer-list">
+            <ul>
+              <li>
+                <p class="title-lg footer-list-title">
+                  Download the Swiftbuy app
+                </p>
+              </li>
+
+              <li class="footer-list-item">
+                <a href="https://apps.apple.com/us/app/opensea-nft-marketplace/id1582861796">
+                  <img
+                    src="./assets/images/appstore.png"
+                    width="134"
+                    height="40"
+                    loading="lazy"
+                    alt="Download Swiftbuy app from AppStore"
+                  />
+                </a>
+
+                <a href="https://play.google.com/store/search?q=opensea&c=apps&hl=en_CA&gl=US">
+                  <img
+                    src="./assets/images/playstore.png"
+                    width="134"
+                    height="40"
+                    loading="lazy"
+                    alt="Download Swiftbuy app from PlayStore"
+                  />
+                </a>
+              </li>
+            </ul>
+
+            <ul>
+              <li>
+                <p class="title-lg footer-list-title">Contact Details</p>
+              </li>
+
+              <li class="footer-list-item">
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+                <a href="mailto:swiftbuy@nft.com" class="footer-link"
+                  >swiftbuy@nft.com</a
+                >
+              </li>
+
+              <li class="footer-list-item">
+                <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+
+                <a href="tel:+1 111-222-3333" class="footer-link"
+                  >+1 111-222-3333</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="body-md text-center copyright">
+            &copy; 2024 SwiftBuy, Made with 💚 by Canvas Alchemists.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+     <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a
+  href="#top"
+  class="back-to-top btn-icon"
+  aria-label="back to top"
+  data-back-top-btn
+>
+  <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+</a>
+
+   <!-- Background Gradient  -->
+   <div class="body-bg-shape"></div>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+   <!--  cartscript -->
+    <script src="./assets/js/cart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/signUp.css">
+    
+  </head>
+
+  <body>
+    <div class="bg-black flex flex-col h-[100vh] md:flex-row">
+      <div class="relative w-[27%] md:w-[45%] lg:w-[30%]">
+        <a href="./index.html"><img class="m-6 w-36 md:absolute" src="./assets/images/Light-Logo.png" alt="" /></a>
+        <img
+        loading="lazy"
+          class="w-auto hidden h-screen md:block md:w-[100%] md:h-[100vh] md:object-cover lg:block xl:block"
+          src="./assets/images/nft3.png"
+          alt=""
+        />
+
+        <p
+          class="absolute hidden md:block lg:block xl:block text-white bottom-6 left-6 drop-shadow-md"
+        >
+          Image by: <a href="https://www.instagram.com/13_imperial/"><span class="font-bold">@13imperial</span></a>
+        </p>
+      </div>
+      <div class="w-auto min-[375px]:w-[95%] min-[375px]:mx-auto md:w-[80%] lg:w-[45%] lg:my-auto lg:mx-0 my-auto">
+        <h1 class="text-[2.5em] font-bold m-6 text-white text-center">
+          Sign Up
+        </h1>
+        <div class="flex flex-col space-y-4 min-[375px]:w-full max-w-[80%] mx-auto ">
+            <div id="progress-bar" class="progress-bar"></div>
+
+            <form id="step-form">
+                <div class="step step-1">
+                  <input
+                    required
+                    placeholder="Email"
+                    type="email"
+                    name="email"
+                    id="email"
+                  />
+                  <!-- <input
+                    placeholder="Birth Date:"
+                    required
+                    type="date"
+                    name="birth-date"
+                    id="birth-date"
+                  /> -->
+                  <input
+                    placeholder="Birth Date:"
+                    required
+                    type="date"
+                    name="birth-date"
+                    id="birth-date"
+                    max="${new Date().toISOString().split('T')[0]}"
+                  />
+                  <div class="next-button">
+                    <button class="next-btn" type="button">Next</button>
+                  </div>
+                </div>
+                <div class="step step-2">
+                  <div class="gender-wrapper">
+                    <input type="radio" id="male" name="action" value="male" />
+                    <label for="male">Male</label><br />
+                    <input type="radio" id="female" name="action" value="female" />
+                    <label for="female">Female</label><br />
+                  </div>
+    
+                  <div class="buttons">
+                    <button class="prev-btn" type="button">Previous</button>
+                    <button class="next-btn" type="button">Next</button>
+                  </div>
+                </div>
+                <div class="step step-3">
+                  <input
+                    required
+                    placeholder="First Name"
+                    type="text"
+                    name="First Name"
+                    id="first-name"
+                  />
+                  <input
+                    placeholder="Last Name"
+                    type="text"
+                    name="Last Name"
+                    id="last-name"
+                  />
+    
+                  <div class="buttons">
+                    <button class="prev-btn" type="button">Previous</button>
+                    <button class="next-btn" type="button">Next</button>
+                  </div>
+                </div>
+    
+                <div class="step step-4">
+                  <input
+                    required
+                    placeholder="Password"
+                    type="password"
+                    name="password"
+                    id="password"
+                  />
+    
+                  <input
+                    required
+                    placeholder="Confirm Password"
+                    type="password"
+                    name="confirm-password"
+                    id="confirm-password"
+                  />
+                  
+                  <div class="flex items-center space-x-2">
+                    <input type="checkbox" id="terms-checkbox" class="form-checkbox h-5 w-5 text-green-500" />
+                    <label for="terms-checkbox" class="text-sm text-white">
+                      By checking you are agree to our nft marketplace.
+                    </label>
+                  </div>
+                  
+                  <div class="buttons">
+                    <button class="prev-btn" type="button">Previous</button>
+                    <button class="submit-btn" type="submit">Sign up</button>
+                  </div>
+                </div>
+                <input
+                  class="outline-none border-none cursor-pointer mt-12 hover:text-green-500"
+                  type="reset"
+                  name="reset"
+                />
+                <div class="flex pt-10 justify-center">
+                  <p class="mr-6">Belong Here?</p>
+                  <a class="text-orange-400 font-bold" href="./login.html">Log in</a>
+                </div>
+              </form>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/signUp.js"></script>
+  </body>
+</html>

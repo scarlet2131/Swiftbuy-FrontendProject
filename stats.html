@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script defer src="./assets/js/stats.js"></script>
+    
+    <!-- 
+      - ionicon link
+    -->
+    <script
+    defer
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+    defer
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="./assets/css/stats.css" />
+  </head>
+  <title>Stats</title>
+  <body>
+    <!-- HEADER  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <a href="./index.html">
+          <img
+            src="./assets/images/Light-Logo.png"
+            width="130"
+            height="40"
+            alt="SwiftBuy home"
+            class="logo-small"
+          />
+          <img
+            src="./assets/images/Light-Logo.png"
+            width="150"
+            height="28"
+            alt="SwiftBuy home"
+            class="logo"
+          />
+        </a>
+
+        <!-- NAVBAR  -->
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="./index.html" class="navbar-li label-lg link:hover"
+                >Home</a
+              >
+            </li>
+
+            <li>
+              <a href="./stats.html" class="navbar-link label-lg link:hover"
+                >Stats</a
+              >
+            </li>
+
+            <li>
+              <a href="./about.html" class="navbar-link label-lg link:hover">About Us</a>
+            </li>
+
+            <li>
+              <a href="./careers.html" class="navbar-link label-lg link:hover">Careers</a>
+            </li>
+
+            <li>
+              <a href="./login.html" class="navbar-link label-lg link:hover" id="navbar-login-logout"></a>
+          </li>
+          </ul>
+        </nav>
+
+        <div class="header-action items-center space-x-4">
+          <button class="btn-icon primary" aria-label="wallet">
+            <a class="flex items-center" href="./cart.html"><ion-icon class="w-8 h-8 text-white" name="cart-outline"></ion-icon></a>
+          </button>
+
+          <button
+            class="btn-icon profil-btn"
+            aria-label="Swiftbuy account: John Wick"
+          >
+          <a href="./profile.html">
+            <img
+              src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Z3bmxoc2RieG1hNXlvNXF1azkxOHVlbjliaTM4OWFhd2x6MW1wbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GLF8IKQ1Fvws3BzQ9v/giphy.gif"
+              width="50"
+              height="50"
+              alt="John Wick"
+              class="img-cover"
+            /></a>
+          </button>
+
+          <button
+            class="nav-toggle-btn"
+            aria-label="menu toggle"
+            data-nav-toggler
+          >
+            <ion-icon
+              name="menu-outline"
+              aria-hidden="true"
+              class="default-icon w-14 h-14 text-white"
+            ></ion-icon>
+
+            <ion-icon
+              name="close-outline"
+              aria-hidden="true"
+              class="active-icon w-14 h-14 text-white"
+            ></ion-icon>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- BACKGROUND  -->
+
+    <div class="body-bg-shape"></div>
+
+    <!-- COLLECTION TABLE -->
+
+    <main class="table" id="customers_table">
+      <section class="table__header h-24 mt-8 min-[274px]:w-[95%] min-[374px]:w-[95%] sm:w-[95%] lg:w-[85%]">
+        <h1 class="text-[2.5em] max-[487px]:text-[2em] font-bold font-[600]">Collection Stats</h1>
+        <div class="input-group opacity-0 md:opacity-0 lg:opacity-100">
+          <input
+            class="search-input"
+            type="search"
+            placeholder="Search Data..."
+          />
+          <ion-icon class="icon" name="search-circle-outline"></ion-icon>
+        </div>
+      
+        <div class="export__file hidden sm:hidden md:hidden lg:block">
+          <label
+            for="export-file"
+            class="export__file-btn"
+            title="Export File"
+          ></label>
+          <input type="checkbox" id="export-file" />
+          <div class="export__file-options">
+            <label>Export As &nbsp; &#10140;</label>
+
+            <label for="export-file" id="toJSON"
+              >JSON <img src="images/json.png" alt=""
+            /></label>
+            <label for="export-file" id="toCSV"
+              >CSV <img src="images/csv.png" alt=""
+            /></label>
+          </div>
+        </div>
+      </section>
+
+<!-- DESKTOP AND TABLET VIEW  -->
+
+      <section class="table__body">
+        <table>
+          <thead>
+            <tr class="z-10 bg-opacity-30 sm:text-[0.8em] md:text-[0.75em] lg:text-[0.8em] xl:text-[0.9em]">
+              <th># <span class="icon-arrow">&UpArrow;</span></th>
+              <th>COLLECTION <span class="icon-arrow">&UpArrow;</span></th>
+              <th>FLOOR PRICE <span class="icon-arrow">&UpArrow;</span></th>
+              <th>FLOOR CHANGE<span class="icon-arrow">&UpArrow;</span></th>
+              <th>VOLUME <span class="icon-arrow">&UpArrow;</span></th>
+              <th>VOLUME CHANGE <span class="icon-arrow">&UpArrow;</span></th>
+              <th>ITEMS <span class="icon-arrow">&UpArrow;</span></th>
+              <th>OWNER <span class="icon-arrow">&UpArrow;</span></th>
+            </tr>
+          </thead>
+          <tbody class="md:overflow-y-scroll overflow-y-scroll sm:overflow-y-scroll">
+            <tr>
+              <td>1</td>
+              <td class="table-data font-bold">
+                <img loading="lazy"
+                  src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXBseGlqbzhydXJ6NTIxZ3o5a3NxMThsbGVwOGN2N2dqdmsxMXFmdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1gbqIc1fK8QgR3bHL7/giphy.gif  "
+                  alt="bitcoin"
+                />Captainz
+              </td>
+              <td class="font-bold">2.5 ETH</td>
+              <td class="status down font-bold">-2.7%</td>
+              <td class="font-bold">469.5 ETH</td>
+              <td>
+                <p class="status up font-bold">+64.6%</p>
+              </td>
+              <td class="font-bold">19.5K</td>
+              <td class="font-bold">25K</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td class="table-data font-bold">
+                <img loading="lazy"
+                  src="https://images.unsplash.com/photo-1645516484419-35a747c99474?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="bitcoin"
+                />13imperial
+              </td>
+              <td class="font-bold">2.5 ETH</td>
+              <td class="status down font-bold">-3.82%</td>
+              <td class="font-bold">401.5 ETH</td>
+              <td>
+                <p class="status up font-bold">+64.6%</p>
+              </td>
+              <td class="font-bold">19.5K</td>
+              <td class="font-bold">25K</td>
+            </tr>
+              <td>3</td>
+              <td class="table-data font-bold ">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1630857453903-0386bfb0d990?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 2" />
+                Monk
+              </td>
+              <td class="font-bold">4.5 ETH</td>
+              <td class="status down font-bold">-2.2%</td>
+              <td class="font-bold">401.5 ETH</td>
+              <td>
+                <p class="status down font-bold">-8.6%</p>
+              </td>
+              <td class="font-bold">19K</td>
+              <td class="font-bold">22K</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td class="table-data font-bold">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1637140945341-f28ada987326?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 3" />
+                Yacht Club 
+              </td>
+              <td class="font-bold">2.1 ETH</td>
+              <td class="status up font-bold">+1.1%</td>
+              <td class="font-bold">420.5 ETH</td>
+              <td>
+                <p class="status up font-bold">+15.2%</p>
+              </td>
+              <td class="font-bold">22.5K</td>
+              <td class="font-bold">27K</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td class="table-data font-bold">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1598123355654-c2cade206752?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 4" />
+                Cybercell
+              </td>
+              <td class="font-bold">6.8 ETH</td>
+              <td class="status down font-bold">-3.8%</td>
+              <td class="font-bold">390.5 ETH</td>
+              <td>
+                <p class="status down font-bold">-10.1%</p>
+              </td>
+              <td class="font-bold">18K</td>
+              <td class="font-bold">20K</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td class="table-data font-bold">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1644310885721-98c5c7f94ca3?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" />
+                Cyberpunk
+              </td>
+              <td class="font-bold">3.9 ETH</td>
+              <td class="status up font-bold">+2.3%</td>
+              <td class="font-bold">412.5 ETH</td>
+              <td>
+                <p class="status down font-bold">-5.6%</p>
+              </td>
+              <td class="font-bold">20.5K</td>
+              <td class="font-bold">26K</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td class="table-data font-bold">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1654140785899-6148f8fa06f9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 6" />
+                DeGods
+              </td>
+              <td class="font-bold">5.2 ETH</td>
+              <td class="status up font-bold">+1.8%</td>
+              <td class="font-bold">415.5 ETH</td>
+              <td>
+                <p class="status up font-bold">+12.3%</p>
+              </td>
+              <td class="font-bold">23K</td>
+              <td class="font-bold">29K</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td class="table-data font-bold">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1636361479581-5ab1a7a72beb?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 8" />
+                Azuki
+              </td>
+              <td class="font-bold">3.6 ETH</td>
+              <td class="status up font-bold">+0.3%</td>
+              <td class="font-bold">410.5 ETH</td>
+              <td>
+                <p class="status down font-bold">-2.5%</p>
+              </td>
+              <td class="font-bold">19.8K</td>
+              <td class="font-bold">25.3K</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td class="table-data font-bold">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1660909311036-9031ae812d8d?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 9" />
+                Zeus
+              </td>
+              <td class="font-bold">5.9 ETH</td>
+              <td class="status down font-bold">-2.1%</td>
+              <td class="font-bold">399.5 ETH</td>
+              <td>
+                <p class="status down font-bold">-9.8%</p>
+              </td>
+              <td class="font-bold">20K</td>
+              <td class="font-bold">24K</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td class="table-data font-bold">
+                <img loading="lazy" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZG43b3VweW0wd2hjdGhlcXNrYnVjZ3hzcHpmZzZpejV3c3o5aWtybSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rth8I5FQNiB86Gs2Kd/giphy.gif" alt="Image 10" />
+                Kratos
+              </td>
+              <td class="font-bold">4.3 ETH</td>
+              <td class="status up font-bold">+1.2%</td>
+              <td class="font-bold">408.5 ETH</td>
+              <td>
+                <p class="status up font-bold">+4.6%</p>
+              </td>
+              <td class="font-bold">21.2K</td>
+              <td class="font-bold">26.7K</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td class="table-data font-bold">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1643888193686-81c45c445b95?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 11" />
+                Ghost
+              </td>
+              <td class="font-bold">3.8 ETH</td>
+              <td class="status down font-bold">-0.6%</td>
+              <td class="font-bold">402.5 ETH</td>
+              <td>
+                <p class="status up font-bold">+7.9%</p>
+              </td>
+              <td class="font-bold">20.1K</td>
+              <td class="font-bold">25.6K</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td class="table-data font-bold">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?q=80&w=1986&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 12" />
+                CloneX
+              </td>
+              <td class="font-bold">6.1 ETH</td>
+              <td class="status up font-bold">+2.5%</td>
+              <td class="font-bold">415.5 ETH</td>
+              <td>
+                <p class="status down font-bold">-3.2%</p>
+              </td>
+              <td class="font-bold">22.3K</td>
+              <td class="font-bold">28.8K</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td class="table-data font-bold">
+                <img loading="lazy" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWVtcmI1enhrODBvdjdhdjA0b2Q4cjRndjdxZ2J2bTRncWZzdHB2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jf9FIB10KBUrdeNLLI/giphy.gif" alt="Image 10" />
+                Dooodles
+              </td>
+              <td class="font-bold">4.3 ETH</td>
+              <td class="status up font-bold">+1.2%</td>
+              <td class="font-bold">408.5 ETH</td>
+              <td>
+                <p class="status up font-bold">+4.6%</p>
+              </td>
+              <td class="font-bold">21.2K</td>
+              <td class="font-bold">26.7K</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td class="table-data font-bold">
+                <img loading="lazy" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3E1amZzc3MzOGF4dWNpMXVpdXVpNHpxNHN5NzAxdXR6eThidWZzOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/682xXuofe4FoRh0Nt3/giphy.gif" alt="Image 11" />
+                JWix
+              </td>
+              <td class="font-bold">3.8 ETH</td>
+              <td class="status down font-bold">-0.6%</td>
+              <td class="font-bold">402.5 ETH</td>
+              <td>
+                <p class="status up font-bold">+7.9%</p>
+              </td>
+              <td class="font-bold">20.1K</td>
+              <td class="font-bold">25.6K</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td class="table-data font-bold">
+                <img loading="lazy" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTRsdnRuYTEycXZpbHF6cWV5NjJ1bmJkbmtjdGFqb2NwaWM2czIzeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/akplM5XNI9rkjUFX1h/giphy.gif" alt="Image 12" />
+                Metaman
+              </td>
+              <td class="font-bold">6.1 ETH</td>
+              <td class="status up font-bold">+2.5%</td>
+              <td class="font-bold">415.5 ETH</td>
+              <td>
+                <p class="status down font-bold">-3.2%</p>
+              </td>
+              <td class="font-bold">22.3K</td>
+              <td class="font-bold">28.8K</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </section>
+
+
+      <!-- MOBILE VIEW  -->
+
+      <section class="mt-[10em] mx-6 min-[1000px]:hidden">
+        
+          <div class="flex">
+            <div class="z-10 w-full flex justify-between p-6 mb-6 font-bold">
+              <div class="flex">
+
+                <p class="cursor-pointer">#</p>
+                <p class="ml-12 cursor-pointer">COLLECTION</p>
+              </div>
+      
+              <p class=" cursor-pointer">VOLUME</p>
+              
+            </div>
+          </div>
+          <div class="w-full mb-[1em] lg:hidden">
+            <div class=" flex bg-black bg-opacity-30 rounded-lg items-center justify-between p-6 w-full ">
+              <div class="flex items-center justify-around [40%] text-white min-[320px]:w-[60%] min-[430px]:w-[45%] min-[545px]:w-[35%]">
+                <div class="flex items-center justify-left w-[12em]">
+
+                  <div class="m-table-data font-bold space-x-6">
+                  <td>1</td>
+                    <img
+                    loading="lazy"
+                    class="w-16 h-16 object-cover rounded-md ml-12"
+                    
+                    src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXBseGlqbzhydXJ6NTIxZ3o5a3NxMThsbGVwOGN2N2dqdmsxMXFmdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1gbqIc1fK8QgR3bHL7/giphy.gif"
+                    alt="bitcoin"
+                    />
+                  </div>
+                </div>
+                <p id="mobile-table" class="w-full font-bold">Captainz</p>
+              </div>
+
+              <td class="font-bold">469.5 ETH</td>
+            </div>
+          </div>
+           
+          
+          <div class="w-full mb-[1em] lg:hidden">
+            <div class="flex bg-black bg-opacity-30 rounded-lg items-center justify-between p-6 w-full">
+              <div class="flex items-center justify-around w-[40%] text-white min-[320px]:w-[60%] min-[430px]:w-[45%] min-[545px]:w-[35%]">
+                <div class="flex items-center justify-left w-[12em]">
+
+                  <div class="m-table-data font-bold">
+                  <td>2</td>
+                    <img
+                    loading="lazy"
+                    class="w-16 h-16 object-cover rounded-md ml-12"
+                    
+                    src="https://images.unsplash.com/photo-1645516484419-35a747c99474?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="bitcoin"
+                    />
+                  </div>
+                </div>
+                <p id="mobile-table" class="w-full font-bold">13imperial</p>
+              </div>
+
+              <td class="font-bold">401.5 ETH</td>
+            </div>
+           
+          
+        </div>
+          <div class="w-full mb-[1em] lg:hidden">
+            <div class="flex bg-black bg-opacity-30 rounded-lg items-center justify-between p-6 w-full">
+              <div class="flex items-center justify-around w-[40%] text-white min-[320px]:w-[60%] min-[430px]:w-[45%] min-[545px]:w-[35%]">
+                <div class="flex items-center justify-left w-[12em]">
+
+                  <div class="m-table-data font-bold">
+                  <td>3</td>
+                    <img
+                    loading="lazy"
+                    class="w-16 h-16 object-cover rounded-md ml-12"
+                    
+                    src="https://images.unsplash.com/photo-1630857453903-0386bfb0d990?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="bitcoin"
+                    />
+                  </div>
+                </div>
+                <p id="mobile-table" class="w-full font-bold">Monk</p>
+              </div>
+
+              <td class="font-bold">401.5 ETH</td>
+            </div>
+           
+          
+        </div>
+          <div class="w-full mb-[1em] lg:hidden">
+            <div class="flex bg-black bg-opacity-30 rounded-lg items-center justify-between p-6 w-full">
+              <div class="flex items-center justify-around w-[40%] text-white min-[320px]:w-[60%] min-[430px]:w-[45%] min-[545px]:w-[35%]">
+                <div class="flex items-center justify-left w-[12em]">
+
+                  <div class="m-table-data font-bold">
+                  <td>4</td>
+                    <img
+                    loading="lazy"
+                    class="w-16 h-16 object-cover rounded-md ml-12"
+                    
+                    src="https://images.unsplash.com/photo-1637140945341-f28ada987326?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="bitcoin"
+                    />
+                  </div>
+                </div>
+                <p id="mobile-table" class="w-full font-bold">Yacht Club</p>
+              </div>
+
+              <td class="font-bold">420.5 ETH</td>
+            </div>
+           
+          
+        </div>
+          <div class="w-full mb-[1em] lg:hidden">
+            <div class="flex bg-black bg-opacity-30 rounded-lg items-center justify-between p-6 w-full">
+              <div class="flex items-center justify-around w-[40%] text-white min-[320px]:w-[60%] min-[430px]:w-[45%] min-[545px]:w-[35%]">
+                <div class="flex items-center justify-left w-[12em]">
+
+                  <div class="m-table-data font-bold">
+                  <td>5</td>
+                    <img
+                    loading="lazy"
+                    class="w-16 h-16 object-cover rounded-md ml-12"
+                    
+                    src="https://images.unsplash.com/photo-1598123355654-c2cade206752?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="bitcoin"
+                    />
+                  </div>
+                </div>
+                <p id="mobile-table" class="w-full font-bold">Cybercell</p>
+              </div>
+
+              <td class="font-bold">390.5 ETH</td>
+            </div>
+           
+          
+        </div>
+          <div class="w-full mb-[1em] lg:hidden">
+            <div class="flex bg-black bg-opacity-30 rounded-lg items-center justify-between p-6 w-full">
+              <div class="flex items-center justify-around w-[40%] text-white min-[320px]:w-[60%] min-[430px]:w-[45%] min-[545px]:w-[35%]">
+                <div class="flex items-center justify-left w-[12em]">
+
+                  <div class="m-table-data font-bold">
+                  <td>6</td>
+                    <img
+                    loading="lazy"
+                    class="w-16 h-16 object-cover rounded-md ml-12"
+                    
+                    src="https://images.unsplash.com/photo-1644310885721-98c5c7f94ca3?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="bitcoin"
+                    />
+                  </div>
+                </div>
+                <p id="mobile-table" class="w-full font-bold">Cyberpunk</p>
+              </div>
+
+              <td class="font-bold">412.5 ETH</td>
+            </div>
+           
+          
+        </div>
+          <div class="w-full mb-[1em] lg:hidden">
+            <div class="flex bg-black bg-opacity-30 rounded-lg items-center justify-between p-6 w-full">
+              <div class="flex items-center justify-around w-[40%] text-white min-[320px]:w-[60%] min-[430px]:w-[45%] min-[545px]:w-[35%]">
+                <div class="flex items-center justify-left w-[12em]">
+
+                  <div class="m-table-data font-bold">
+                  <td>7</td>
+                    <img
+                    loading="lazy"
+                    class="w-16 h-16 object-cover rounded-md ml-12"
+                    
+                    src="https://images.unsplash.com/photo-1654140785899-6148f8fa06f9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="bitcoin"
+                    />
+                  </div>
+                </div>
+                <p id="mobile-table" class="w-full font-bold">DeGods</p>
+              </div>
+
+              <td class="font-bold">415.5 ETH</td>
+            </div>
+           
+          
+        </div>
+          <div class="w-full mb-[1em] lg:hidden">
+            <div class="flex bg-black bg-opacity-30 rounded-lg items-center justify-between p-6 w-full">
+              <div class="flex items-center justify-around w-[40%] text-white min-[320px]:w-[60%] min-[430px]:w-[45%] min-[545px]:w-[35%]">
+                <div class="flex items-center justify-left w-[12em]">
+
+                  <div class="m-table-data font-bold">
+                  <td>8</td>
+                    <img
+                    loading="lazy"
+                    class="w-16 h-16 object-cover rounded-md ml-12"
+                    
+                    src="https://images.unsplash.com/photo-1636361479581-5ab1a7a72beb?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="bitcoin"
+                    />
+                  </div>
+                </div>
+                <p id="mobile-table" class="w-full font-bold">Azuki</p>
+              </div>
+
+              <td class="font-bold">410.5 ETH</td>
+            </div>
+           
+          
+        </div>
+          <div class="w-full mb-[1em] lg:hidden">
+            <div class="flex bg-black bg-opacity-30 rounded-lg items-center justify-between p-6 w-full">
+              <div class="flex items-center justify-around w-[40%] text-white min-[320px]:w-[60%] min-[430px]:w-[45%] min-[545px]:w-[35%]">
+                <div class="flex items-center justify-left w-[12em]">
+
+                  <div class="m-table-data font-bold">
+                  <td>9</td>
+                    <img
+                    loading="lazy"
+                    class="w-16 h-16 object-cover rounded-md ml-12"
+                    
+                    src="https://images.unsplash.com/photo-1660909311036-9031ae812d8d?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="bitcoin"
+                    />
+                  </div>
+                </div>
+                <p id="mobile-table" class="w-full font-bold">Zeus</p>
+              </div>
+
+              <td class="font-bold">399.5 ETH</td>
+            </div>
+           
+          
+        </div>
+          <div class="w-full mb-[1em] lg:hidden">
+            <div class="flex bg-black bg-opacity-30 rounded-lg items-center justify-between p-6 w-full">
+              <div class="flex items-center justify-around w-[40%] text-white min-[320px]:w-[70%] min-[430px]:w-[45%] min-[545px]:w-[35%]">
+                <div class="flex items-center justify-left w-[12em]">
+
+                  <div class="m-table-data font-bold">
+                  <td>10</td>
+                    <img
+                    loading="lazy"
+                    class="w-16 h-16 object-cover rounded-md ml-12"
+                    
+                    src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZG43b3VweW0wd2hjdGhlcXNrYnVjZ3hzcHpmZzZpejV3c3o5aWtybSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rth8I5FQNiB86Gs2Kd/giphy.gif"
+                    alt="bitcoin"
+                    />
+                  </div>
+                </div>
+                <p id="mobile-table" class="w-full font-bold ml-6">Yacht Club</p>
+              </div>
+
+              <td class="font-bold">408.5 ETH</td>
+            </div>
+           
+          
+        </div>
+          <div class="w-full mb-[1em] lg:hidden">
+            <div class="flex bg-black bg-opacity-30 rounded-lg items-center justify-between p-6 w-full">
+              <div class="flex items-center justify-around w-[40%] text-white min-[320px]:w-[70%] min-[430px]:w-[45%] min-[545px]:w-[35%]">
+                <div class="flex items-center justify-left w-[12em]">
+
+                  <div class="m-table-data font-bold">
+                  <td>11</td>
+                    <img
+                    loading="lazy"
+                    class="w-16 h-16 object-cover rounded-md ml-12"
+                    
+                    src="https://images.unsplash.com/photo-1643888193686-81c45c445b95?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="bitcoin"
+                    />
+                  </div>
+                </div>
+                <p id="mobile-table" class="w-full font-bold ml-6">Ghost</p>
+              </div>
+
+              <td class="font-bold">402.5 ETH</td>
+            </div>
+           
+          
+        </div>
+          <div class="w-full mb-[1em] lg:hidden">
+            <div class="flex bg-black bg-opacity-30 rounded-lg items-center justify-between p-6 w-full">
+              <div class="flex items-center justify-around w-[40%] text-white min-[320px]:w-[70%] min-[430px]:w-[45%] min-[545px]:w-[35%]">
+                <div class="flex items-center justify-left w-[12em]">
+
+                  <div class="m-table-data font-bold">
+                  <td>12</td>
+                    <img
+                    loading="lazy"
+                    class="w-16 h-16 object-cover rounded-md ml-12"
+                    
+                    src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?q=80&w=1986&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="bitcoin"
+                    />
+                  </div>
+                </div>
+                <p id="mobile-table" class="w-full font-bold ml-6">CloneX</p>
+              </div>
+
+              <td class="font-bold">415.5 ETH</td>
+            </div>
+           
+          
+        </div>
+          <div class="w-full mb-[1em] lg:hidden">
+            <div class="flex bg-black bg-opacity-30 rounded-lg items-center justify-between p-6 w-full">
+              <div class="flex items-center justify-around w-[40%] text-white min-[320px]:w-[70%] min-[430px]:w-[45%] min-[545px]:w-[35%]">
+                <div class="flex items-center justify-left w-[12em]">
+
+                  <div class="m-table-data font-bold">
+                  <td>13</td>
+                    <img
+                    loading="lazy"
+                    class="w-16 h-16 object-cover rounded-md ml-12"
+                    
+                    src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWVtcmI1enhrODBvdjdhdjA0b2Q4cjRndjdxZ2J2bTRncWZzdHB2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jf9FIB10KBUrdeNLLI/giphy.gif"
+                    alt="bitcoin"
+                    />
+                  </div>
+                </div>
+                <p id="mobile-table" class="w-full font-bold ml-6">Dooodles</p>
+              </div>
+
+              <td class="font-bold">408.5 ETH</td>
+            </div>
+           
+          
+        </div>
+          <div class="w-full mb-[1em] lg:hidden">
+            <div class="flex bg-black bg-opacity-30 rounded-lg items-center justify-between p-6 w-full">
+              <div class="flex items-center justify-around w-[40%] text-white min-[320px]:w-[70%] min-[430px]:w-[45%] min-[545px]:w-[35%]">
+                <div class="flex items-center justify-left w-[12em]">
+
+                  <div class="m-table-data font-bold">
+                  <td>14</td>
+                    <img
+                    loading="lazy"
+                    class="w-16 h-16 object-cover rounded-md ml-12"
+                    
+                    src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3E1amZzc3MzOGF4dWNpMXVpdXVpNHpxNHN5NzAxdXR6eThidWZzOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/682xXuofe4FoRh0Nt3/giphy.gif"
+                    alt="bitcoin"
+                    />
+                  </div>
+                </div>
+                <p id="mobile-table" class="w-full font-bold ml-6">JWix</p>
+              </div>
+
+              <td class="font-bold">402.5 ETH</td>
+            </div>
+           
+          
+        </div>
+          <div class="w-full mb-[7em] lg:hidden">
+            <div class="flex bg-black bg-opacity-30 rounded-lg items-center justify-between p-6 w-full">
+              <div class="flex items-center justify-around w-[40%] text-white min-[320px]:w-[70%] min-[430px]:w-[45%] min-[545px]:w-[35%]">
+                <div class="flex items-center justify-left w-[12em]">
+
+                  <div class="m-table-data font-bold">
+                  <td>15</td>
+                    <img
+                    loading="lazy"
+                    class="w-16 h-16 object-cover rounded-md ml-12"
+                    
+                    src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTRsdnRuYTEycXZpbHF6cWV5NjJ1bmJkbmtjdGFqb2NwaWM2czIzeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/akplM5XNI9rkjUFX1h/giphy.gif"
+                    alt="bitcoin"
+                    />
+                  </div>
+                </div>
+                <p id="mobile-table" class="w-full font-bold ml-6">Metaman</p>
+              </div>
+
+              <td class="font-bold">415.5 ETH</td>
+            </div>
+           
+          
+        </div>
+          
+        
+        
+      </section>
+      
+     
+    </main>
+     <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer text-[1.5em]">
+    <div class="section footer-top">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="#">
+            <img
+              src="./assets/images/Light-Logo.png"
+              width="130"
+              height="28"
+              loading="lazy"
+              alt="Swiftbuy home"
+            />
+          </a>
+
+          <p class="body-md footer-text">
+            Buy, sell and discover exclusive digital assets by the top artists
+            of NFTs world.
+          </p>
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="title-lg footer-list-title">Swiftbuy</p>
+          </li>
+
+          <li>
+            <a href="./stats.html" class="footer-link">
+              <ion-icon name="chevron-forward"></ion-icon>
+
+              <span class="span">Explore Item</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward"></ion-icon>
+
+              <span class="span">Live Auction</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward"></ion-icon>
+
+              <span class="span">Activities</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward"></ion-icon>
+
+              <span class="span">Wallets</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="title-lg footer-list-title">Useful Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward"></ion-icon>
+
+              <span class="span">About Us</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward"></ion-icon>
+
+              <span class="span">Blog & News</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward"></ion-icon>
+
+              <span class="span">Terms & Condition</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward"></ion-icon>
+
+              <span class="span">Privacy policy</span>
+            </a>
+          </li>
+
+          
+          <li>
+            <a href="./login.html" class="footer-link">
+              <ion-icon name="chevron-forward"></ion-icon>
+
+              <span id="footer-login" class="span">Login</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="tel:+1 111-222-3333" class="footer-link">
+              <ion-icon name="chevron-forward"></ion-icon>
+
+              <span class="span">Contact Us</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="footer-list">
+          <ul>
+            <li>
+              <p class="title-lg footer-list-title">
+                Download the Swiftbuy app
+              </p>
+            </li>
+
+            <li class="footer-list-item">
+              <a href="#">
+                <img
+                  src="./assets/images/appstore.png"
+                  width="134"
+                  height="40"
+                  loading="lazy"
+                  alt="Download Swiftbuy app from AppStore"
+                />
+              </a>
+
+              <a href="#">
+                <img
+                  src="./assets/images/playstore.png"
+                  width="134"
+                  height="40"
+                  loading="lazy"
+                  alt="Download Swiftbuy app from PlayStore"
+                />
+              </a>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <p class="title-lg footer-list-title">Contact Details</p>
+            </li>
+
+            <li class="footer-list-item">
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+              <a href="mailto:swiftbuy@nft.com" class="footer-link"
+                >swiftbuy@nft.com</a
+              >
+            </li>
+
+            <li class="footer-list-item">
+              <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+
+              <a href="tel:+1 111-222-3333" class="footer-link"
+                >+1 111-222-3333</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="body-md text-center copyright">
+          &copy; 2024 SwiftBuy, Made with 💚 by Canvas Alchemists.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+   <!-- 
+  - #BACK TO TOP
+-->
+
+<a
+href="#top"
+class="back-to-top btn-icon"
+aria-label="back to top"
+data-back-top-btn
+>
+<ion-icon class="text-white w-8 h-8" name="arrow-up" aria-hidden="true"></ion-icon>
+</a>
+
+
+  </body>
+</html>
