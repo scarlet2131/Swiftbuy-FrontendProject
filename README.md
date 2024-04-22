@@ -34,11 +34,13 @@ Security Measures: Outlines measures taken to secure user data and transactions.
 ### Project Setup
 Clone the repository:
 ```
-git clone [repository-link]```
+git clone [repository-link]
+```
 
 Navigate to the project directory:
 ```
-cd swiftbuy```
+cd swiftbuy
+```
 
 Open the index.html file in a browser to view the project.
 ### Technology Stack
