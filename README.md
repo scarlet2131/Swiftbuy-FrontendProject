@@ -51,3 +51,6 @@ CSS
 JavaScript
 Vision
 Our aim with SwiftBuy is to establish a leading platform in the NFT market by providing a simple, transparent, and robust interface that caters to both creators and collectors.
+### Link to the Hosted Website 
+
+https://scarlet2131.github.io/Swiftbuy-FrontendProject/index.html
