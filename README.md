@@ -2,12 +2,9 @@ SwiftBuy - NFT Marketplace
 ### Team Canvas Alchemists
 Team Members:
 
-Deep Pravinbhai Prajapati (C0903287)
-
-Jainam Dharmendra Patluwala (C0902797)
-
-Monisha Ranjan (C0914148)
-
+Monisha Ranjan (C0914148),
+Deep Pravinbhai Prajapati (C0903287),
+Jainam Dharmendra Patluwala (C0902797),
 Sushma Telgamshetti (C0901939)
 
 
