@@ -6,6 +6,8 @@ Deep Pravinbhai Prajapati (C0903287)
 Jainam Dharmendra Patluwala (C0902797)
 Monisha Ranjan (C0914148)
 Sushma Telgamshetti (C0901939)
+
+
 Introduction
 SwiftBuy is a simple yet effective NFT marketplace designed to revolutionize the way digital art and collectibles are bought and sold online. Utilizing HTML, CSS, and JavaScript, SwiftBuy offers a user-centric platform with an intuitive interface and essential features to facilitate easy navigation and transactions.
 
