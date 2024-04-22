@@ -3,8 +3,11 @@ SwiftBuy - NFT Marketplace
 Team Members:
 
 Deep Pravinbhai Prajapati (C0903287)
+
 Jainam Dharmendra Patluwala (C0902797)
+
 Monisha Ranjan (C0914148)
+
 Sushma Telgamshetti (C0901939)
 
 
